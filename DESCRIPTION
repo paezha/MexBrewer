@@ -1,0 +1,11 @@
+Package: MexBrewer
+Title: Color Palettes Inspired by Works Mexican Muralists
+Version: 0.0.1
+Authors@R: 
+    person("Antonio", "Páez", , "paezha@mcmaster.ca", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0001-6912-9919"))
+Description: Palettes Inspired by Works at the Mexican Muralists.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
