@@ -7,14 +7,14 @@ NULL
 
 #' Complete list of palettes
 #'
-#' Use \code{\link{met.brewer}} to construct palettes.
+#' Use \code{\link{mex.brewer}} to construct palettes.
 #'
 #' @export
 MexPalettes <- list(
-  Atentado = list(c("#171e15", "#445452", "#b4bcb4", "#b9afa8", "#e8ccfab", "#f5bc5c", "#cc4c24", "#481904"),
+  Atentado = list(c("#171e15", "#445452", "#b4bcb4", "#b9afa8", "#e8cfab", "#f5bc5c", "#cc4c24", "#481904"),
                   c(1, 2, 3, 4, 5, 6, 7, 8),
                   sequential = FALSE),
-  Aurora = list(c("#e7c7a8", "#c29786", "#874d4a", "#5f2f2d", "#3b141a", "331718", "#27170b"),
+  Aurora = list(c("#e7c7a8", "#c29786", "#874d4a", "#5f2f2d", "#3b141a", "#331718", "#27170b"),
                 c(1, 2, 3, 4, 5, 6, 7),
                 sequential = TRUE),
   Concha = list(c("#d6d8d0", "#d4d5bf", "#708469", "#506446", "#3d4d34", "#37402b", "#2a3326"),
@@ -30,7 +30,7 @@ MexPalettes <- list(
 
 #' Mex Palette Generator
 #'
-#' These are a handful of color palettes from Met.
+#' These are a handful of color palettes from Mexican muralists.
 #'
 #' @param name Name of Palette. Choices are:
 #' \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}
@@ -41,11 +41,11 @@ MexPalettes <- list(
 #' @return A vector of colors.
 #' @examples
 #' mex.brewer("Atentado")
-#' met.brewer("Concha", 6)
-#' met.brewer("Frida", 10, "continuous")
+#' mex.brewer("Concha", 6)
+#' mex.brewer("Frida", 10, "continuous")
 #' @keywords colors
 #' @export
-met.brewer <- function(name, n, type = c("discrete", "continuous")) {
+mex.brewer <- function(name, n, type = c("discrete", "continuous")) {
 
   palette <- MexPalettes[[name]]
 
@@ -98,7 +98,7 @@ print.palette <- function(x, ...) {
 
 #' Names of sequential palettes
 #'
-#' Use \code{\link{met.brewer}} to construct palettes.
+#' Use \code{\link{mex.brewer}} to construct palettes.
 #'
 #' @export
 sequential_palettes <- c("Aurora", "Concha", "Frida")
@@ -110,7 +110,7 @@ sequential_palettes <- c("Aurora", "Concha", "Frida")
 #'
 #' Checks whether a palette is Sequential.
 #'
-#' @param name Name of Palette. Choices are:
+#' @param palette.name Name of Palette. Choices are:
 #' \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}
 #' @examples
 #' sequential.palette("Aurora")

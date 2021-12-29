@@ -11,6 +11,6 @@ An object of class \code{character} of length 3.
 sequential_palettes
 }
 \description{
-Use \code{\link{met.brewer}} to construct palettes.
+Use \code{\link{mex.brewer}} to construct palettes.
 }
 \keyword{datasets}

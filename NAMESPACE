@@ -2,7 +2,7 @@
 
 S3method(print,palette)
 export(MexPalettes)
-export(met.brewer)
+export(mex.brewer)
 export(sequential.palette)
 export(sequential_palettes)
 importFrom(grDevices,rgb)

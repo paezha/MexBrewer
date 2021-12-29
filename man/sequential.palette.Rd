@@ -7,7 +7,7 @@
 sequential.palette(palette.name)
 }
 \arguments{
-\item{name}{Name of Palette. Choices are:
+\item{palette.name}{Name of Palette. Choices are:
 \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}}
 }
 \value{

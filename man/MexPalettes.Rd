@@ -11,6 +11,6 @@ An object of class \code{list} of length 4.
 MexPalettes
 }
 \description{
-Use \code{\link{met.brewer}} to construct palettes.
+Use \code{\link{mex.brewer}} to construct palettes.
 }
 \keyword{datasets}
