@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# MexBrewer <img src="man/figures/MexBrewer.png" align="right" width=300 />
+# MexBrewer [<img src="man/figures/MexBrewer.png" align="right" width=300 />](https://paezha.github.io/MexBrewer/)
 
 <!-- badges: start -->
 <!-- badges: end -->

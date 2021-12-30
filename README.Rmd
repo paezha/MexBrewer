@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# MexBrewer <img src="man/figures/MexBrewer.png" align="right" width=300 />
+# MexBrewer [<img src="man/figures/MexBrewer.png" align="right" width=300 />](https://paezha.github.io/MexBrewer/)
 
 <!-- badges: start -->
 <!-- badges: end -->
