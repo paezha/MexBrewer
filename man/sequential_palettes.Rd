@@ -5,7 +5,7 @@
 \alias{sequential_palettes}
 \title{Names of sequential palettes}
 \format{
-An object of class \code{character} of length 3.
+An object of class \code{character} of length 4.
 }
 \usage{
 sequential_palettes

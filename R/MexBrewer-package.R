@@ -5,12 +5,36 @@
 ## usethis namespace: end
 NULL
 
+#' Mexican states.
+#'
+#' A simple features object with the boundaries of states in Mexico (unprojected; CRS is WGS 84).
+#'
+#' @format A simple features data frame with 32 rows and 4 variables:
+#' \describe{
+#'   \item{ID}{Unique identifier of polygon}
+#'   \item{nombre}{Name of the state}
+#'   \item{region}{Geographical region of the state; there are five regions in the country}
+#'   \item{geometry}{Geometry information of the polygons}
+#' }
+#'
+#' @docType data
+#' @keywords datasets
+#' @name mx_estados
+#' @usage data(mx_estados)
+#' @examples
+#'  data(mx_estados)
+#'  summary(mx_estados)
+"mx_estados"
+
 #' Complete list of palettes
 #'
 #' Use \code{\link{mex.brewer}} to construct palettes.
 #'
 #' @export
 MexPalettes <- list(
+  Alacena = list(c("#693829", "#894b33", "#a56a3e", "#cfb267", "#d9c5b6", "#9ca9ba", "#5480b5", "#3d619d", "#405a95", "#485ca6"),
+                  c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+                  sequential = FALSE),
   Atentado = list(c("#171e15", "#445452", "#b4bcb4", "#b9afa8", "#e8cfab", "#f5bc5c", "#cc4c24", "#481904"),
                   c(1, 2, 3, 4, 5, 6, 7, 8),
                   sequential = FALSE),
@@ -21,6 +45,9 @@ MexPalettes <- list(
                 c(1, 2, 3, 4, 5, 6, 7),
                 sequential = TRUE),
   Frida = list(c("#d6d8d0", "#a4abb0", "#4c6c94", "#435e7f", "#2f415f", "#232c43", "#0b1829"),
+               c(1, 2, 3, 4, 5, 6, 7),
+               sequential = TRUE),
+  Tierra = list(c("#ccc5c3", "#8d7e4f", "#7a6431", "#69542b", "#573c22", "#4f330a", "#3b221a"),
                c(1, 2, 3, 4, 5, 6, 7),
                sequential = TRUE)
 )
@@ -33,7 +60,7 @@ MexPalettes <- list(
 #' These are a handful of color palettes from Mexican muralists.
 #'
 #' @param name Name of Palette. Choices are:
-#' \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Tierra}
 #' @param n Number of desired colors. If number of requested colors is beyond the scope of the palette,
 #' colors are automatically interpolated. If n is not provided, the length of the palette is used.
 #' @param type Either "continuous" or "discrete". Use continuous if you want to automatically
@@ -101,7 +128,7 @@ print.palette <- function(x, ...) {
 #' Use \code{\link{mex.brewer}} to construct palettes.
 #'
 #' @export
-sequential_palettes <- c("Aurora", "Concha", "Frida")
+sequential_palettes <- c("Aurora", "Concha", "Frida", "Tierra")
 
 
 # Names whether a palette is sequential
@@ -111,7 +138,7 @@ sequential_palettes <- c("Aurora", "Concha", "Frida")
 #' Checks whether a palette is Sequential.
 #'
 #' @param palette.name Name of Palette. Choices are:
-#' \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}
+#' \code{Alacena},\code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Tierra}
 #' @examples
 #' sequential.palette("Aurora")
 #' @return TRUE/FALSE if palette is sequential

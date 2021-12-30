@@ -8,7 +8,7 @@ sequential.palette(palette.name)
 }
 \arguments{
 \item{palette.name}{Name of Palette. Choices are:
-\code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}}
+\code{Alacena},\code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Tierra}}
 }
 \value{
 TRUE/FALSE if palette is sequential

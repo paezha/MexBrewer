@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-MexBrewer is a package with color palettes inspired by the works of Mexican muralists. I was inspired to develop this package by [{MetBrewer}](https://github.com/BlakeRMills/MetBrewer) by [Blake Mills](brm2143@columbia.edu). The structure of the package and coding, like {MetBrewer}, is based on [{PNWColors}](https://github.com/jakelawlor/PNWColors) and [{wesanderson}](https://github.com/karthik/wesanderson).
+MexBrewer is a package with color palettes inspired by the works of Mexican muralists. The inspiration for this package was [{MetBrewer}](https://github.com/BlakeRMills/MetBrewer) by [Blake Mills](brm2143@columbia.edu). The structure of the package and coding, like {MetBrewer}, is based on [{PNWColors}](https://github.com/jakelawlor/PNWColors) and [{wesanderson}](https://github.com/karthik/wesanderson).
 
 ## Installation
 
@@ -66,3 +66,107 @@ knitr::include_graphics("man/figures/frida.png")
 ```
 
 ***
+
+### María Izquierdo
+
+#### Alacena
+
+This palette is called `Alacena`.
+
+```{r echo=FALSE, out.width="400px", fig.cap="Alacena"}
+knitr::include_graphics("man/figures/maria_izquierdo_alacena.jpg")
+```
+
+```{r echo=FALSE, out.width="185px", fig.cap="Alacena"}
+knitr::include_graphics("man/figures/alacena.png")
+```
+
+#### La Tierra
+
+This palette is called `Tierra`.
+
+```{r echo=FALSE, out.width="400px", fig.cap="Alacena"}
+knitr::include_graphics("man/figures/maria_izquierdo_tierra.jpg")
+```
+
+```{r echo=FALSE, out.width="185px", fig.cap="Alacena"}
+knitr::include_graphics("man/figures/tierra.png")
+```
+
+## Examples 
+
+```{r load-packges}
+library(MexBrewer)
+library(mxmaps)
+library(sf)
+library(tidyverse)
+```
+
+Invoke data sets used in the examples:
+```{r}
+data("mx_estados") # Simple features object with the boundaries of states in Mexico
+data("df_mxstate_2020") # Data from {mxmaps }with population statistics at the state level
+```
+
+Join population statistics to state boundaries:
+```{r}
+mx_estados <- mx_estados %>%
+  left_join(df_mxstate_2015%>%
+              dplyr::transmute(pop2015 = pop, # Population by state in 2015
+                               am2015 = afromexican, # Afromexican population by state in 2015
+                               state_name),
+            by = c("nombre" = "state_name")) %>%
+  left_join(df_mxstate_2020 %>%
+              #Percentage of population that speak an indigenous language
+              mutate(pct_ind_lang = indigenous_language/pop * 100) %>% 
+              dplyr::transmute(pop2020 = pop,
+                               am2020 = afromexican,
+                               state_name, 
+                               pct_ind_lang),
+            by = c("nombre" = "state_name")) %>%
+  # Calculate the change in popualtion and afromexican population between 2015 and 2020
+  mutate(delta_pop = (pop2020 - pop2015)/pop2015,
+         delta_am = (am2020 - am2015)/am2015)
+```
+
+Distribution of population by geographic region in Mexico:
+```{r}
+ggplot(data = mx_estados,
+       aes(x = region, y = pop2015, fill = region)) +
+  geom_boxplot() +
+  scale_fill_manual(values = mex.brewer("Atentado", n = 5)) +
+  theme_minimal()
+```
+
+Percentage of population who speak an indigenous language in 2020 by state:
+```{r}
+ggplot() +
+  geom_sf(data = mx_estados,
+          aes(fill = pct_ind_lang),
+          color = "white",
+          size = 0.08) +
+  scale_fill_gradientn(colors = mex.brewer("Tierra")) +
+  theme_minimal()
+```
+
+Percentage change of population by state between 2015 and 2020:
+```{r}
+ggplot() +
+  geom_sf(data = mx_estados,
+          aes(fill = delta_pop),
+          color = "white",
+          size = 0.08) +
+  scale_fill_gradientn(colors = mex.brewer("Atentado")) +
+  theme_minimal()
+```
+
+Percentage change of afromexican population by state between 2015 and 2020: 
+```{r}
+ggplot() +
+  geom_sf(data = mx_estados,
+          aes(fill = delta_am),
+          color = "white",
+          size = 0.08) +
+  scale_fill_gradientn(colors = mex.brewer("Alacena")) +
+  theme_minimal()
+```

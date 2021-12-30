@@ -4,9 +4,18 @@
 \name{MexBrewer-package}
 \alias{MexBrewer}
 \alias{MexBrewer-package}
-\title{MexBrewer: Color Palettes Inspired by Works Mexican Muralists}
+\title{MexBrewer: Color Palettes Inspired by Works of Mexican Muralists}
 \description{
-Palettes Inspired by Works at the Mexican Muralists.
+Palettes Inspired by Works of Mexican Muralists.
+}
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/paezha/MexBrewer}
+  \item \url{https://paezha.github.io/MexBrewer/}
+  \item Report bugs at \url{https://github.com/paezha/MexBrewer/issues}
+}
+
 }
 \author{
 \strong{Maintainer}: Antonio Páez \email{paezha@mcmaster.ca} (\href{https://orcid.org/0000-0001-6912-9919}{ORCID})
