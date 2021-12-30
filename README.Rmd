@@ -134,7 +134,7 @@ Distribution of population by geographic region in Mexico:
 ggplot(data = mx_estados,
        aes(x = region, y = pop2015, fill = region)) +
   geom_boxplot() +
-  scale_fill_manual(values = mex.brewer("Atentado", n = 5)) +
+  scale_fill_manual(values = mex.brewer("Concha", n = 5)) +
   theme_minimal()
 ```
 
