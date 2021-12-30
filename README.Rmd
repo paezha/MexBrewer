@@ -13,42 +13,37 @@ knitr::opts_chunk$set(
 )
 ```
 
-# MexBrewer
+# MexBrewer <img src="man/figures/MexBrewer.png" align="right" width=180 />
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of MexBrewer is to ...
+MexBrewer is a package with color palettes inspired by the works of Mexican muralists. I was inspired to develop this package by [{MetBrewer}](https://github.com/BlakeRMills/MetBrewer) by [Blake Mills](brm2143@columbia.edu). The structure of the package and coding, like {MetBrewer}, is based on [{PNWColors}](https://github.com/jakelawlor/PNWColors) and [{wesanderson}](https://github.com/karthik/wesanderson).
 
 ## Installation
 
-You can install the development version of MexBrewer like so:
+Currently, there is only a development version of {MexBrewer}, which can be installed like so:
 
 ``` r
-# FILL THIS IN! HOW CAN PEOPLE INSTALL YOUR DEV PACKAGE?
+if (!require("remotes")) install.packages("remotes")
+remotes::install_github("paezha/MexBrewer") 
 ```
 
-## Example
+# Artists
 
-This is a basic example which shows you how to solve a common problem:
+## Aurora Reyes
 
-```{r example}
-library(MexBrewer)
-## basic example code
+### El atentado a las maestras rurales
+
+This palette is called `Atentado`.
+
+```{r echo=FALSE, out.width="400px", fig.cap="El atentado a las maestras rurales"}
+knitr::include_graphics("man/figures/aurora_reyes_atentado.jpeg")
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
+```{r echo=FALSE, out.width="185px", fig.cap="Atentado"}
+knitr::include_graphics("man/figures/atentado.png")
 ```
 
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this. You could also use GitHub Actions to re-render `README.Rmd` every time you push. An example workflow can be found here: <https://github.com/r-lib/actions/tree/v1/examples>.
 
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
+***
