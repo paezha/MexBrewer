@@ -29,11 +29,11 @@ if (!require("remotes")) install.packages("remotes")
 remotes::install_github("paezha/MexBrewer") 
 ```
 
-# Artists
+## Artists
 
-## Aurora Reyes
+### Aurora Reyes
 
-### El atentado a las maestras rurales
+#### El atentado a las maestras rurales
 
 This palette is called `Atentado`.
 
@@ -45,5 +45,24 @@ knitr::include_graphics("man/figures/aurora_reyes_atentado.jpeg")
 knitr::include_graphics("man/figures/atentado.png")
 ```
 
+#### Aurora, Concha, y Frida
+
+This work of Aurora Rivera inspired three palettes, called `Aurora`, `Concha`, and `Frida`.
+
+```{r echo=FALSE, out.width="400px", fig.cap="Aurora, Concha, y Frida"}
+knitr::include_graphics("man/figures/aurora_concha_frida.jpg")
+```
+
+```{r echo=FALSE, out.width="185px", fig.cap="Aurora"}
+knitr::include_graphics("man/figures/aurora.png")
+```
+
+```{r echo=FALSE, out.width="185px", fig.cap="Aurora"}
+knitr::include_graphics("man/figures/concha.png")
+```
+
+```{r echo=FALSE, out.width="185px", fig.cap="Aurora"}
+knitr::include_graphics("man/figures/frida.png")
+```
 
 ***

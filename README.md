@@ -24,16 +24,29 @@ if (!require("remotes")) install.packages("remotes")
 remotes::install_github("paezha/MexBrewer") 
 ```
 
-# Artists
+## Artists
 
-## Aurora Reyes
+### Aurora Reyes
 
-### El atentado a las maestras rurales
+#### El atentado a las maestras rurales
 
 This palette is called `Atentado`.
 
 <img src="man/figures/aurora_reyes_atentado.jpeg" title="El atentado a las maestras rurales" alt="El atentado a las maestras rurales" width="400px" />
 
 <img src="man/figures/atentado.png" title="Atentado" alt="Atentado" width="185px" />
+
+#### Aurora, Concha, y Frida
+
+This work of Aurora Rivera inspired three palettes, called `Aurora`,
+`Concha`, and `Frida`.
+
+<img src="man/figures/aurora_concha_frida.jpg" title="Aurora, Concha, y Frida" alt="Aurora, Concha, y Frida" width="400px" />
+
+<img src="man/figures/aurora.png" title="Aurora" alt="Aurora" width="185px" />
+
+<img src="man/figures/concha.png" title="Aurora" alt="Aurora" width="185px" />
+
+<img src="man/figures/frida.png" title="Aurora" alt="Aurora" width="185px" />
 
 ------------------------------------------------------------------------
