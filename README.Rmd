@@ -13,7 +13,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-# MexBrewer <img src="man/figures/MexBrewer.png" align="right" width=180 />
+# MexBrewer <img src="man/figures/MexBrewer.png" align="right" width=230 />
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -37,11 +37,11 @@ remotes::install_github("paezha/MexBrewer")
 
 This palette is called `Atentado`.
 
-```{r echo=FALSE, out.width="400px", fig.cap="El atentado a las maestras rurales"}
+```{r echo=FALSE, out.width="400px", fig.cap="Aurora, Concha, y Frida"}
 knitr::include_graphics("man/figures/aurora_reyes_atentado.jpeg")
 ```
 
-```{r echo=FALSE, out.width="185px", fig.cap="Atentado"}
+```{r echo=FALSE, out.width="185px", fig.cap="Aurora"}
 knitr::include_graphics("man/figures/atentado.png")
 ```
 
@@ -49,19 +49,19 @@ knitr::include_graphics("man/figures/atentado.png")
 
 This work of Aurora Rivera inspired three palettes, called `Aurora`, `Concha`, and `Frida`.
 
-```{r echo=FALSE, out.width="400px", fig.cap="Aurora, Concha, y Frida"}
+```{r auroa-concha-frida, echo=FALSE, out.width="400px", fig.cap="Aurora, Concha, y Frida"}
 knitr::include_graphics("man/figures/aurora_concha_frida.jpg")
 ```
 
-```{r echo=FALSE, out.width="185px", fig.cap="Aurora"}
+```{r aurora-palette, echo=FALSE, out.width="185px", fig.cap="Aurora"}
 knitr::include_graphics("man/figures/aurora.png")
 ```
 
-```{r echo=FALSE, out.width="185px", fig.cap="Aurora"}
+```{r concha-palette, echo=FALSE, out.width="185px", fig.cap="Concha"}
 knitr::include_graphics("man/figures/concha.png")
 ```
 
-```{r echo=FALSE, out.width="185px", fig.cap="Aurora"}
+```{r frida-palette, echo=FALSE, out.width="185px", fig.cap="Frida"}
 knitr::include_graphics("man/figures/frida.png")
 ```
 
@@ -73,11 +73,11 @@ knitr::include_graphics("man/figures/frida.png")
 
 This palette is called `Alacena`.
 
-```{r echo=FALSE, out.width="400px", fig.cap="Alacena"}
+```{r alacena, echo=FALSE, out.width="400px", fig.cap="Alacena"}
 knitr::include_graphics("man/figures/maria_izquierdo_alacena.jpg")
 ```
 
-```{r echo=FALSE, out.width="185px", fig.cap="Alacena"}
+```{r alacena-palette, echo=FALSE, out.width="185px", fig.cap="Alacena"}
 knitr::include_graphics("man/figures/alacena.png")
 ```
 
@@ -85,13 +85,15 @@ knitr::include_graphics("man/figures/alacena.png")
 
 This palette is called `Tierra`.
 
-```{r echo=FALSE, out.width="400px", fig.cap="Alacena"}
+```{r tierra, echo=FALSE, out.width="400px", fig.cap="Tiera"}
 knitr::include_graphics("man/figures/maria_izquierdo_tierra.jpg")
 ```
 
-```{r echo=FALSE, out.width="185px", fig.cap="Alacena"}
+```{r tierra-palette, echo=FALSE, out.width="185px", fig.cap="Tierra"}
 knitr::include_graphics("man/figures/tierra.png")
 ```
+
+***
 
 ## Examples 
 
@@ -103,13 +105,13 @@ library(tidyverse)
 ```
 
 Invoke data sets used in the examples:
-```{r}
+```{r load-data}
 data("mx_estados") # Simple features object with the boundaries of states in Mexico
 data("df_mxstate_2020") # Data from {mxmaps }with population statistics at the state level
 ```
 
 Join population statistics to state boundaries:
-```{r}
+```{r prepare-data}
 mx_estados <- mx_estados %>%
   left_join(df_mxstate_2015%>%
               dplyr::transmute(pop2015 = pop, # Population by state in 2015
@@ -130,7 +132,7 @@ mx_estados <- mx_estados %>%
 ```
 
 Distribution of population by geographic region in Mexico:
-```{r}
+```{r population-distribution}
 ggplot(data = mx_estados,
        aes(x = region, y = pop2015, fill = region)) +
   geom_boxplot() +
@@ -139,7 +141,7 @@ ggplot(data = mx_estados,
 ```
 
 Percentage of population who speak an indigenous language in 2020 by state:
-```{r}
+```{r indigenous-languages}
 ggplot() +
   geom_sf(data = mx_estados,
           aes(fill = pct_ind_lang),
@@ -150,7 +152,7 @@ ggplot() +
 ```
 
 Percentage change of population by state between 2015 and 2020:
-```{r}
+```{r population-change}
 ggplot() +
   geom_sf(data = mx_estados,
           aes(fill = delta_pop),
@@ -161,7 +163,7 @@ ggplot() +
 ```
 
 Percentage change of afromexican population by state between 2015 and 2020: 
-```{r}
+```{r afromexican-population-change}
 ggplot() +
   geom_sf(data = mx_estados,
           aes(fill = delta_am),

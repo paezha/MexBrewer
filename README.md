@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# MexBrewer <img src="man/figures/MexBrewer.png" align="right" width=180 />
+# MexBrewer <img src="man/figures/MexBrewer.png" align="right" width=230 />
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -32,9 +32,9 @@ remotes::install_github("paezha/MexBrewer")
 
 This palette is called `Atentado`.
 
-<img src="man/figures/aurora_reyes_atentado.jpeg" title="El atentado a las maestras rurales" alt="El atentado a las maestras rurales" width="400px" />
+<img src="man/figures/aurora_reyes_atentado.jpeg" title="Aurora, Concha, y Frida" alt="Aurora, Concha, y Frida" width="400px" />
 
-<img src="man/figures/atentado.png" title="Atentado" alt="Atentado" width="185px" />
+<img src="man/figures/atentado.png" title="Aurora" alt="Aurora" width="185px" />
 
 #### Aurora, Concha, y Frida
 
@@ -45,9 +45,9 @@ This work of Aurora Rivera inspired three palettes, called `Aurora`,
 
 <img src="man/figures/aurora.png" title="Aurora" alt="Aurora" width="185px" />
 
-<img src="man/figures/concha.png" title="Aurora" alt="Aurora" width="185px" />
+<img src="man/figures/concha.png" title="Concha" alt="Concha" width="185px" />
 
-<img src="man/figures/frida.png" title="Aurora" alt="Aurora" width="185px" />
+<img src="man/figures/frida.png" title="Frida" alt="Frida" width="185px" />
 
 ------------------------------------------------------------------------
 
@@ -65,9 +65,11 @@ This palette is called `Alacena`.
 
 This palette is called `Tierra`.
 
-<img src="man/figures/maria_izquierdo_tierra.jpg" title="Alacena" alt="Alacena" width="400px" />
+<img src="man/figures/maria_izquierdo_tierra.jpg" title="Tiera" alt="Tiera" width="400px" />
 
-<img src="man/figures/tierra.png" title="Alacena" alt="Alacena" width="185px" />
+<img src="man/figures/tierra.png" title="Tierra" alt="Tierra" width="185px" />
+
+------------------------------------------------------------------------
 
 ## Examples
 
@@ -126,7 +128,7 @@ ggplot(data = mx_estados,
   theme_minimal()
 ```
 
-<img src="man/figures/README-unnamed-chunk-14-1.png" width="100%" />
+<img src="man/figures/README-population-distribution-1.png" width="100%" />
 
 Percentage of population who speak an indigenous language in 2020 by
 state:
@@ -141,7 +143,7 @@ ggplot() +
   theme_minimal()
 ```
 
-<img src="man/figures/README-unnamed-chunk-15-1.png" width="100%" />
+<img src="man/figures/README-indigenous-languages-1.png" width="100%" />
 
 Percentage change of population by state between 2015 and 2020:
 
@@ -155,7 +157,7 @@ ggplot() +
   theme_minimal()
 ```
 
-<img src="man/figures/README-unnamed-chunk-16-1.png" width="100%" />
+<img src="man/figures/README-population-change-1.png" width="100%" />
 
 Percentage change of afromexican population by state between 2015 and
 2020:
@@ -170,4 +172,4 @@ ggplot() +
   theme_minimal()
 ```
 
-<img src="man/figures/README-unnamed-chunk-17-1.png" width="100%" />
+<img src="man/figures/README-afromexican-population-change-1.png" width="100%" />
