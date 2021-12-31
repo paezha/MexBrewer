@@ -268,7 +268,7 @@ canvas_squares(colors = mex.brewer("Alacena"),
 canvas_mandelbrot(colors = mex.brewer("Atentado"), 
                   zoom = 8,
                 iterations = 200,
-               resolution = 200)
+               resolution = 500)
 ```
 
 <img src="man/figures/README-aRtsy-3-1.png" width="100%" />

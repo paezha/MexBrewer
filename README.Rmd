@@ -266,5 +266,5 @@ canvas_squares(colors = mex.brewer("Alacena"),
 canvas_mandelbrot(colors = mex.brewer("Atentado"), 
                   zoom = 8,
                 iterations = 200,
-               resolution = 200)
+               resolution = 500)
 ```
