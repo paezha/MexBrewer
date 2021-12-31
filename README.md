@@ -74,19 +74,12 @@ This palette is called `Tierra`.
 ## Examples
 
 ``` r
+library(aRtsy) # Ijeamaka Anyene's package for generative art 
+library(flametree) # Danielle Navarro's package for generative art
 library(MexBrewer)
 library(mxmaps)
 library(sf)
-#> Linking to GEOS 3.9.1, GDAL 3.2.1, PROJ 7.2.1; sf_use_s2() is TRUE
 library(tidyverse)
-#> -- Attaching packages --------------------------------------- tidyverse 1.3.1 --
-#> v ggplot2 3.3.5     v purrr   0.3.4
-#> v tibble  3.1.6     v dplyr   1.0.7
-#> v tidyr   1.1.4     v stringr 1.4.0
-#> v readr   2.1.1     v forcats 0.5.1
-#> -- Conflicts ------------------------------------------ tidyverse_conflicts() --
-#> x dplyr::filter() masks stats::filter()
-#> x dplyr::lag()    masks stats::lag()
 ```
 
 Invoke data sets used in the examples:
@@ -173,3 +166,109 @@ ggplot() +
 ```
 
 <img src="man/figures/README-afromexican-population-change-1.png" width="100%" />
+
+# Some Rtistry
+
+### Danielle Navarro’s [{flametree}](https://github.com/djnavarro/flametree)
+
+The following three images were created using the {flametree} package.
+
+``` r
+# pick some colours
+shades <- MexBrewer::mex.brewer("Tierra") %>%
+  as.vector()
+
+# data structure defining the trees
+dat <- flametree_grow(seed = 3563,
+                      time = 11, 
+                      trees = 10)
+
+# draw the plot
+dat %>% 
+  flametree_plot(
+    background = shades[1],
+    palette = shades[2:length(shades)], 
+    style = "nativeflora"
+  )
+```
+
+<img src="man/figures/README-flametree-1-1.png" width="100%" />
+
+``` r
+# pick some colours
+shades <- MexBrewer::mex.brewer("Concha") %>%
+  as.vector()
+
+# data structure defining the trees
+dat <- flametree_grow(seed = 3536,
+                      time = 8, 
+                      trees = 6)
+
+# draw the plot
+dat %>% 
+  flametree_plot(
+    background = shades[1],
+    palette = rev(shades[2:length(shades)]), 
+    style = "wisp"
+  )
+```
+
+<img src="man/figures/README-flametree-2-1.png" width="100%" />
+
+``` r
+# pick some colours
+shades <- MexBrewer::mex.brewer("Frida") %>%
+  as.vector()
+
+# data structure defining the trees
+dat <- flametree_grow(seed = 3653,
+                      time = 8, 
+                      trees = 6)
+
+# draw the plot
+dat %>% 
+  flametree_plot(
+    background = shades[1],
+    palette = shades[2:length(shades)], 
+    style = "minimal"
+  )
+```
+
+<img src="man/figures/README-flametree-3-1.png" width="100%" />
+
+### Koen Derks’s [aRtsy](https://github.com/koenderks/aRtsy)
+
+The following three images were created using the {aRtsy} package.
+
+``` r
+my_formula <- list(
+  x = quote(runif(1, -1, 1) * x_i^2 - sin(y_i^2)),
+  y = quote(runif(1, -1, 1) * y_i^3 - cos(x_i^2))
+)
+
+canvas_function(colors = mex.brewer("Atentado"), 
+                polar = FALSE,
+                by = 0.005,
+                formula = my_formula)
+```
+
+<img src="man/figures/README-aRtsy-1-1.png" width="100%" />
+
+``` r
+canvas_squares(colors = mex.brewer("Alacena"), 
+                cuts = 20,
+                ratio = 1.5,
+                resolution = 200,
+               noise = TRUE)
+```
+
+<img src="man/figures/README-aRtsy-2-1.png" width="100%" />
+
+``` r
+canvas_mandelbrot(colors = mex.brewer("Atentado"), 
+                  zoom = 8,
+                iterations = 200,
+               resolution = 200)
+```
+
+<img src="man/figures/README-aRtsy-3-1.png" width="100%" />

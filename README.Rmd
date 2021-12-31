@@ -97,7 +97,9 @@ knitr::include_graphics("man/figures/tierra.png")
 
 ## Examples 
 
-```{r load-packges}
+```{r load-packges, message=FALSE, warning=FALSE}
+library(aRtsy) # Ijeamaka Anyene's package for generative art 
+library(flametree) # Danielle Navarro's package for generative art
 library(MexBrewer)
 library(mxmaps)
 library(sf)
@@ -171,4 +173,98 @@ ggplot() +
           size = 0.08) +
   scale_fill_gradientn(colors = mex.brewer("Alacena")) +
   theme_minimal()
+```
+
+# Some Rtistry
+
+### Danielle Navarro's [{flametree}](https://github.com/djnavarro/flametree)
+
+The following three images were created using the {flametree} package.
+
+```{r flametree-1, cache=TRUE}
+# pick some colours
+shades <- MexBrewer::mex.brewer("Tierra") %>%
+  as.vector()
+
+# data structure defining the trees
+dat <- flametree_grow(seed = 3563,
+                      time = 11, 
+                      trees = 10)
+
+# draw the plot
+dat %>% 
+  flametree_plot(
+    background = shades[1],
+    palette = shades[2:length(shades)], 
+    style = "nativeflora"
+  )
+```
+
+```{r flametree-2, cache=TRUE}
+# pick some colours
+shades <- MexBrewer::mex.brewer("Concha") %>%
+  as.vector()
+
+# data structure defining the trees
+dat <- flametree_grow(seed = 3536,
+                      time = 8, 
+                      trees = 6)
+
+# draw the plot
+dat %>% 
+  flametree_plot(
+    background = shades[1],
+    palette = rev(shades[2:length(shades)]), 
+    style = "wisp"
+  )
+```
+
+```{r flametree-3, cache=TRUE}
+# pick some colours
+shades <- MexBrewer::mex.brewer("Frida") %>%
+  as.vector()
+
+# data structure defining the trees
+dat <- flametree_grow(seed = 3653,
+                      time = 8, 
+                      trees = 6)
+
+# draw the plot
+dat %>% 
+  flametree_plot(
+    background = shades[1],
+    palette = shades[2:length(shades)], 
+    style = "minimal"
+  )
+```
+
+### Koen Derks's [aRtsy](https://github.com/koenderks/aRtsy)
+
+The following three images were created using the {aRtsy} package.
+
+```{r aRtsy-1, cache=TRUE}
+my_formula <- list(
+  x = quote(runif(1, -1, 1) * x_i^2 - sin(y_i^2)),
+  y = quote(runif(1, -1, 1) * y_i^3 - cos(x_i^2))
+)
+
+canvas_function(colors = mex.brewer("Atentado"), 
+                polar = FALSE,
+                by = 0.005,
+                formula = my_formula)
+```
+
+```{r aRtsy-2, cache=TRUE}
+canvas_squares(colors = mex.brewer("Alacena"), 
+                cuts = 20,
+                ratio = 1.5,
+                resolution = 200,
+               noise = TRUE)
+```
+
+```{r aRtsy-3, cache=TRUE}
+canvas_mandelbrot(colors = mex.brewer("Atentado"), 
+                  zoom = 8,
+                iterations = 200,
+               resolution = 200)
 ```
