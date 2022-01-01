@@ -242,6 +242,7 @@ dat %>%
 
 The following three images were created using the {aRtsy} package.
 
+Functions:
 ```{r aRtsy-1, cache=TRUE}
 my_formula <- list(
   x = quote(runif(1, -1, 1) * x_i^2 - sin(y_i^2)),
@@ -254,17 +255,189 @@ canvas_function(colors = mex.brewer("Atentado"),
                 formula = my_formula)
 ```
 
+Mosaic:
 ```{r aRtsy-2, cache=TRUE}
 canvas_squares(colors = mex.brewer("Alacena"), 
-                cuts = 20,
-                ratio = 1.5,
-                resolution = 200,
+               cuts = 20,
+               ratio = 1.5,
+               resolution = 200,
                noise = TRUE)
 ```
 
+Mandelbrot's set:
 ```{r aRtsy-3, cache=TRUE}
-canvas_mandelbrot(colors = mex.brewer("Atentado"), 
+canvas_mandelbrot(colors = mex.brewer("Aurora"), 
                   zoom = 8,
-                iterations = 200,
-               resolution = 500)
+                  iterations = 200,
+                  resolution = 500)
 ```
+
+### Meghan S. Harris's [waves](https://www.thetidytrekker.com/post/making-waves)
+
+These plots are adaptations of Meghan Harris's artsy waves. Create data frames with wave functions:
+```{r}
+##Set up the "range" on the x axis for horizontal waves=====
+wave_theta <- seq(from = -pi,
+                  to = -0, 
+                  by = 0.01) 
+
+# Create waves using functions
+wave_1 <- data.frame(x = wave_theta) %>% 
+  mutate(y = (sin(x) * cos(2 * wave_theta) + exp(x * 2)))
+
+wave_2 <- data.frame(x = wave_theta) %>%
+  mutate(y = (0.5 * sin(x) * cos(2.0 * wave_theta) + exp(x)) - 0.5)
+```
+
+<!--
+
+```{r}
+ggplot() +
+  geom_ribbon(data = wave_1,
+              aes(x, min = y - 0.025, 
+                  ymax = y + 0.025),
+              color = "black",
+              fill = "orange") +
+  geom_ribbon(data = wave_2,
+              aes(x, min = y - 0.025, 
+                  ymax = y + 0.025),
+              color = "black",
+              fill = "blue")
+```
+
+-->
+
+Define a function to convert a single wave into a set of `n` waves. The function takes a data frame with a wave function and returns a data frame with `n` waves:
+```{r}
+# Creating a function for iterations====
+
+wave_maker <- function(wave_df, n, shift){
+  
+  #Create an empty list to store our multiple dataframes(waves)#
+  wave_list<- list()
+  
+  #Create a for loop to iteratively make "n" waves shifted a distance `shift` from each other #
+  for(i in seq_along(1:n)){
+    
+    wave_list[[i]] <- wave_df %>%
+      mutate(y = y - (shift * i),
+             group = i)  
+  }
+  
+  #return the completed data frame to the environment#
+  return(bind_rows(wave_list))
+}
+```
+
+Create layered waves using the data frames with the wave functions above:
+```{r}
+wave_layers <- rbind(wave_1 %>%
+                       wave_maker(n = 5, 
+                                  shift = 0.075),
+                     wave_2 %>%
+                       wave_maker(n = 5, 
+                                  shift = 0.075) %>%
+                       mutate(group = group + 5)) # adjust the group counter to identify waves uniquely
+```
+
+Plot layered waves using cartesian coordinates and palette `Alacena`:
+```{r}
+ggplot(wave_layers) +
+  geom_rect(aes(xmin = -pi, 
+                xmax = -0.0, 
+                ymin = min(y) - 0.50,
+                ymax = max(y) + 0.30 ),
+            size = 2.5,
+            color = mex.brewer("Alacena")[6],
+            fill = mex.brewer("Alacena")[4]) +
+  geom_rect(aes(xmin = -pi, 
+                xmax = -0.0, 
+                ymin = min(y) - 0.50,
+                ymax = max(y) + 0.30 ),
+            size = 1,
+            color = "black",
+            fill = NA) +
+  geom_ribbon(aes(x, 
+                  ymin = y - 0.025 * 4 * x,
+                  ymax = y + 0.015 * 10 * x, 
+                  group = group, 
+                  fill = group),
+              color = "black",
+              size = 0.5) + 
+  scale_fill_gradientn(colors = mex.brewer("Alacena"))+
+  theme_void() +
+  theme(legend.position = "none")
+```
+
+Plot layered waves using polar coordinates and palette `Atentado`:
+```{r}
+ggplot(wave_layers) +
+  geom_rect(aes(xmin = -pi, 
+                xmax = -0.0, 
+                ymin = min(y) - 0.45,
+                ymax = max(y) + 0.30 ),
+            size = 2.5,
+            color = mex.brewer("Atentado")[6],
+            fill = mex.brewer("Atentado")[3]) +
+  geom_rect(aes(xmin = -pi, 
+                xmax = -0.0, 
+                ymin = min(y) - 0.45,
+                ymax = max(y) + 0.30 ),
+            size = 1,
+            color = "black",
+            fill = NA) +
+  geom_ribbon(aes(x, 
+                  ymin = y - 0.025 * 4 * x,
+                  ymax = y + 0.015 * 10 * x, 
+                  group = group, 
+                  fill = group),
+              color = "black",
+              size = 0.5) + 
+  scale_fill_gradientn(colors = mex.brewer("Atentado")) +
+  coord_polar(theta = "x",  
+              start = 0, 
+              direction = 1, 
+              clip = "on") +
+  theme_void() +
+  theme(legend.position = "none")
+```
+
+
+
+```{r}
+##Creating the "top" of our wave polygon====
+curve_top <- tibble(x = wave_theta,
+                    y = (sin(x)*cos(wave_theta))+exp(x*2)) %>%
+  arrange(x)
+
+##Grab the max X value in the wave from the top wave====
+max_x_point <- curve_top[which(curve_top$x == max(curve_top$x)),]
+
+
+##Create a subset of curve_top to create a "side" of the wave====
+curve_side_right <- max_x_point %>%
+  add_row(max_x_point - c(0,0.5))%>%
+  arrange(desc(y))
+
+##Create a copy of the curve_top dataset with the y values decreased by .5====
+curve_bottom <- curve_top %>%
+  mutate(y = y - 0.5) %>%
+  arrange(desc(x))
+
+##Grab the min X value in the wave from the top wave====
+min_x_point <- curve_top[which(curve_top$x == min(curve_top$x)),]
+
+##Create a side that will connect curve_top and curve_bottom on the left side====
+curve_side_left <- min_x_point %>%
+  add_row(min_x_point - c(0,0.5)) %>%
+  arrange(y)
+
+##Slap all of them together into one dataframe IN ORDER (top,right,bottom,left)
+wave <- bind_rows(curve_top,curve_side_right,curve_bottom,curve_side_left)
+
+##View the entire thing====
+wave %>%
+  ggplot(aes(x=x, y=y))+
+  geom_polygon()
+```
+
