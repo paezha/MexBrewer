@@ -257,6 +257,7 @@
 <a class="anchor" aria-label="anchor" href="#koen-derkss-artsy"></a>
 </h3>
 <p>The following three images were created using the {aRtsy} package.</p>
+<p>Functions:</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">my_formula</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>
   x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/substitute.html" class="external-link">quote</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/stats/Uniform.html" class="external-link">runif</a></span><span class="op">(</span><span class="fl">1</span>, <span class="op">-</span><span class="fl">1</span>, <span class="fl">1</span><span class="op">)</span> <span class="op">*</span> <span class="va">x_i</span><span class="op">^</span><span class="fl">2</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html" class="external-link">sin</a></span><span class="op">(</span><span class="va">y_i</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span>,
@@ -268,19 +269,184 @@
                 by <span class="op">=</span> <span class="fl">0.005</span>,
                 formula <span class="op">=</span> <span class="va">my_formula</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-aRtsy-1-1.png" width="100%"></p>
+<p>Mosaic:</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu">canvas_squares</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/mex.brewer.html">mex.brewer</a></span><span class="op">(</span><span class="st">"Alacena"</span><span class="op">)</span>, 
-                cuts <span class="op">=</span> <span class="fl">20</span>,
-                ratio <span class="op">=</span> <span class="fl">1.5</span>,
-                resolution <span class="op">=</span> <span class="fl">200</span>,
+               cuts <span class="op">=</span> <span class="fl">20</span>,
+               ratio <span class="op">=</span> <span class="fl">1.5</span>,
+               resolution <span class="op">=</span> <span class="fl">200</span>,
                noise <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-aRtsy-2-1.png" width="100%"></p>
+<p>Mandelbrot’s set:</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="fu">canvas_mandelbrot</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/mex.brewer.html">mex.brewer</a></span><span class="op">(</span><span class="st">"Atentado"</span><span class="op">)</span>, 
+<code class="sourceCode R"><span class="fu">canvas_mandelbrot</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/mex.brewer.html">mex.brewer</a></span><span class="op">(</span><span class="st">"Aurora"</span><span class="op">)</span>, 
                   zoom <span class="op">=</span> <span class="fl">8</span>,
-                iterations <span class="op">=</span> <span class="fl">200</span>,
-               resolution <span class="op">=</span> <span class="fl">200</span><span class="op">)</span></code></pre></div>
+                  iterations <span class="op">=</span> <span class="fl">200</span>,
+                  resolution <span class="op">=</span> <span class="fl">500</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-aRtsy-3-1.png" width="100%"></p>
+</div>
+<div class="section level3">
+<h3 id="meghan-s-harriss-waves">Meghan S. Harris’s <a href="https://www.thetidytrekker.com/post/making-waves" class="external-link">waves</a>
+<a class="anchor" aria-label="anchor" href="#meghan-s-harriss-waves"></a>
+</h3>
+<p>These plots are adaptations of Meghan Harris’s artsy waves. Create data frames with wave functions:</p>
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">##Set up the "range" on the x axis for horizontal waves=====</span>
+<span class="va">wave_theta</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq</a></span><span class="op">(</span>from <span class="op">=</span> <span class="op">-</span><span class="va">pi</span>,
+                  to <span class="op">=</span> <span class="op">-</span><span class="fl">0</span>, 
+                  by <span class="op">=</span> <span class="fl">0.01</span><span class="op">)</span> 
+
+<span class="co"># Create waves using functions</span>
+<span class="va">wave_1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">wave_theta</span><span class="op">)</span> <span class="op">%&gt;%</span> 
+  <span class="fu">mutate</span><span class="op">(</span>y <span class="op">=</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html" class="external-link">sin</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html" class="external-link">cos</a></span><span class="op">(</span><span class="fl">2</span> <span class="op">*</span> <span class="va">wave_theta</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">exp</a></span><span class="op">(</span><span class="va">x</span> <span class="op">*</span> <span class="fl">2</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>
+
+<span class="va">wave_2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html" class="external-link">data.frame</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">wave_theta</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu">mutate</span><span class="op">(</span>y <span class="op">=</span> <span class="op">(</span><span class="fl">0.5</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html" class="external-link">sin</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/r/base/Trig.html" class="external-link">cos</a></span><span class="op">(</span><span class="fl">2.0</span> <span class="op">*</span> <span class="va">wave_theta</span><span class="op">)</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">exp</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span> <span class="op">-</span> <span class="fl">0.5</span><span class="op">)</span></code></pre></div>
+<!--
+
+
+```r
+ggplot() +
+  geom_ribbon(data = wave_1,
+              aes(x, min = y - 0.025, 
+                  ymax = y + 0.025),
+              color = "black",
+              fill = "orange") +
+  geom_ribbon(data = wave_2,
+              aes(x, min = y - 0.025, 
+                  ymax = y + 0.025),
+              color = "black",
+              fill = "blue")
+```
+
+<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+
+-->
+<p>Define a function to convert a single wave into a set of <code>n</code> waves. The function takes a data frame with a wave function and returns a data frame with <code>n</code> waves:</p>
+<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co"># Creating a function for iterations====</span>
+
+<span class="va">wave_maker</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">wave_df</span>, <span class="va">n</span>, <span class="va">shift</span><span class="op">)</span><span class="op">{</span>
+  
+  <span class="co">#Create an empty list to store our multiple dataframes(waves)#</span>
+  <span class="va">wave_list</span><span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="op">)</span>
+  
+  <span class="co">#Create a for loop to iteratively make "n" waves shifted a distance `shift` from each other #</span>
+  <span class="kw">for</span><span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html" class="external-link">seq_along</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="va">n</span><span class="op">)</span><span class="op">)</span><span class="op">{</span>
+    
+    <span class="va">wave_list</span><span class="op">[[</span><span class="va">i</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">wave_df</span> <span class="op">%&gt;%</span>
+      <span class="fu">mutate</span><span class="op">(</span>y <span class="op">=</span> <span class="va">y</span> <span class="op">-</span> <span class="op">(</span><span class="va">shift</span> <span class="op">*</span> <span class="va">i</span><span class="op">)</span>,
+             group <span class="op">=</span> <span class="va">i</span><span class="op">)</span>  
+  <span class="op">}</span>
+  
+  <span class="co">#return the completed data frame to the environment#</span>
+  <span class="kw"><a href="https://rdrr.io/r/base/function.html" class="external-link">return</a></span><span class="op">(</span><span class="fu">bind_rows</span><span class="op">(</span><span class="va">wave_list</span><span class="op">)</span><span class="op">)</span>
+<span class="op">}</span></code></pre></div>
+<p>Create layered waves using the data frames with the wave functions above:</p>
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="va">wave_layers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">rbind</a></span><span class="op">(</span><span class="va">wave_1</span> <span class="op">%&gt;%</span>
+                       <span class="fu">wave_maker</span><span class="op">(</span>n <span class="op">=</span> <span class="fl">5</span>, 
+                                  shift <span class="op">=</span> <span class="fl">0.075</span><span class="op">)</span>,
+                     <span class="va">wave_2</span> <span class="op">%&gt;%</span>
+                       <span class="fu">wave_maker</span><span class="op">(</span>n <span class="op">=</span> <span class="fl">5</span>, 
+                                  shift <span class="op">=</span> <span class="fl">0.075</span><span class="op">)</span> <span class="op">%&gt;%</span>
+                       <span class="fu">mutate</span><span class="op">(</span>group <span class="op">=</span> <span class="va">group</span> <span class="op">+</span> <span class="fl">5</span><span class="op">)</span><span class="op">)</span> <span class="co"># adjust the group counter to identify waves uniquely</span></code></pre></div>
+<p>Plot layered waves using cartesian coordinates and palette <code>Alacena</code>:</p>
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">wave_layers</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_rect</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>xmin <span class="op">=</span> <span class="op">-</span><span class="va">pi</span>, 
+                xmax <span class="op">=</span> <span class="op">-</span><span class="fl">0.0</span>, 
+                ymin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">-</span> <span class="fl">0.50</span>,
+                ymax <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.30</span> <span class="op">)</span>,
+            size <span class="op">=</span> <span class="fl">2.5</span>,
+            color <span class="op">=</span> <span class="fu"><a href="reference/mex.brewer.html">mex.brewer</a></span><span class="op">(</span><span class="st">"Alacena"</span><span class="op">)</span><span class="op">[</span><span class="fl">6</span><span class="op">]</span>,
+            fill <span class="op">=</span> <span class="fu"><a href="reference/mex.brewer.html">mex.brewer</a></span><span class="op">(</span><span class="st">"Alacena"</span><span class="op">)</span><span class="op">[</span><span class="fl">4</span><span class="op">]</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_rect</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>xmin <span class="op">=</span> <span class="op">-</span><span class="va">pi</span>, 
+                xmax <span class="op">=</span> <span class="op">-</span><span class="fl">0.0</span>, 
+                ymin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">-</span> <span class="fl">0.50</span>,
+                ymax <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.30</span> <span class="op">)</span>,
+            size <span class="op">=</span> <span class="fl">1</span>,
+            color <span class="op">=</span> <span class="st">"black"</span>,
+            fill <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_ribbon</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, 
+                  ymin <span class="op">=</span> <span class="va">y</span> <span class="op">-</span> <span class="fl">0.025</span> <span class="op">*</span> <span class="fl">4</span> <span class="op">*</span> <span class="va">x</span>,
+                  ymax <span class="op">=</span> <span class="va">y</span> <span class="op">+</span> <span class="fl">0.015</span> <span class="op">*</span> <span class="fl">10</span> <span class="op">*</span> <span class="va">x</span>, 
+                  group <span class="op">=</span> <span class="va">group</span>, 
+                  fill <span class="op">=</span> <span class="va">group</span><span class="op">)</span>,
+              color <span class="op">=</span> <span class="st">"black"</span>,
+              size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu">scale_fill_gradientn</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/mex.brewer.html">mex.brewer</a></span><span class="op">(</span><span class="st">"Alacena"</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
+  <span class="fu">theme_void</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">theme</span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-8-1.png" width="100%"></p>
+<p>Plot layered waves using polar coordinates and palette <code>Atentado</code>:</p>
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="fu">ggplot</span><span class="op">(</span><span class="va">wave_layers</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_rect</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>xmin <span class="op">=</span> <span class="op">-</span><span class="va">pi</span>, 
+                xmax <span class="op">=</span> <span class="op">-</span><span class="fl">0.0</span>, 
+                ymin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">-</span> <span class="fl">0.45</span>,
+                ymax <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.30</span> <span class="op">)</span>,
+            size <span class="op">=</span> <span class="fl">2.5</span>,
+            color <span class="op">=</span> <span class="fu"><a href="reference/mex.brewer.html">mex.brewer</a></span><span class="op">(</span><span class="st">"Atentado"</span><span class="op">)</span><span class="op">[</span><span class="fl">6</span><span class="op">]</span>,
+            fill <span class="op">=</span> <span class="fu"><a href="reference/mex.brewer.html">mex.brewer</a></span><span class="op">(</span><span class="st">"Atentado"</span><span class="op">)</span><span class="op">[</span><span class="fl">3</span><span class="op">]</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_rect</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>xmin <span class="op">=</span> <span class="op">-</span><span class="va">pi</span>, 
+                xmax <span class="op">=</span> <span class="op">-</span><span class="fl">0.0</span>, 
+                ymin <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">-</span> <span class="fl">0.45</span>,
+                ymax <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span> <span class="op">+</span> <span class="fl">0.30</span> <span class="op">)</span>,
+            size <span class="op">=</span> <span class="fl">1</span>,
+            color <span class="op">=</span> <span class="st">"black"</span>,
+            fill <span class="op">=</span> <span class="cn">NA</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">geom_ribbon</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span><span class="va">x</span>, 
+                  ymin <span class="op">=</span> <span class="va">y</span> <span class="op">-</span> <span class="fl">0.025</span> <span class="op">*</span> <span class="fl">4</span> <span class="op">*</span> <span class="va">x</span>,
+                  ymax <span class="op">=</span> <span class="va">y</span> <span class="op">+</span> <span class="fl">0.015</span> <span class="op">*</span> <span class="fl">10</span> <span class="op">*</span> <span class="va">x</span>, 
+                  group <span class="op">=</span> <span class="va">group</span>, 
+                  fill <span class="op">=</span> <span class="va">group</span><span class="op">)</span>,
+              color <span class="op">=</span> <span class="st">"black"</span>,
+              size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span> 
+  <span class="fu">scale_fill_gradientn</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/mex.brewer.html">mex.brewer</a></span><span class="op">(</span><span class="st">"Atentado"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">coord_polar</span><span class="op">(</span>theta <span class="op">=</span> <span class="st">"x"</span>,  
+              start <span class="op">=</span> <span class="fl">0</span>, 
+              direction <span class="op">=</span> <span class="fl">1</span>, 
+              clip <span class="op">=</span> <span class="st">"on"</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">theme_void</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
+  <span class="fu">theme</span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-9-1.png" width="100%"></p>
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span class="co">##Creating the "top" of our wave polygon====</span>
+<span class="va">curve_top</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>x <span class="op">=</span> <span class="va">wave_theta</span>,
+                    y <span class="op">=</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html" class="external-link">sin</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html" class="external-link">cos</a></span><span class="op">(</span><span class="va">wave_theta</span><span class="op">)</span><span class="op">)</span><span class="op">+</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">exp</a></span><span class="op">(</span><span class="va">x</span><span class="op">*</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu">arrange</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
+
+<span class="co">##Grab the max X value in the wave from the top wave====</span>
+<span class="va">max_x_point</span> <span class="op">&lt;-</span> <span class="va">curve_top</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">curve_top</span><span class="op">$</span><span class="va">x</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">curve_top</span><span class="op">$</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>,<span class="op">]</span>
+
+
+<span class="co">##Create a subset of curve_top to create a "side" of the wave====</span>
+<span class="va">curve_side_right</span> <span class="op">&lt;-</span> <span class="va">max_x_point</span> <span class="op">%&gt;%</span>
+  <span class="fu">add_row</span><span class="op">(</span><span class="va">max_x_point</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0.5</span><span class="op">)</span><span class="op">)</span><span class="op">%&gt;%</span>
+  <span class="fu">arrange</span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">y</span><span class="op">)</span><span class="op">)</span>
+
+<span class="co">##Create a copy of the curve_top dataset with the y values decreased by .5====</span>
+<span class="va">curve_bottom</span> <span class="op">&lt;-</span> <span class="va">curve_top</span> <span class="op">%&gt;%</span>
+  <span class="fu">mutate</span><span class="op">(</span>y <span class="op">=</span> <span class="va">y</span> <span class="op">-</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu">arrange</span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>
+
+<span class="co">##Grab the min X value in the wave from the top wave====</span>
+<span class="va">min_x_point</span> <span class="op">&lt;-</span> <span class="va">curve_top</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">curve_top</span><span class="op">$</span><span class="va">x</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">curve_top</span><span class="op">$</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>,<span class="op">]</span>
+
+<span class="co">##Create a side that will connect curve_top and curve_bottom on the left side====</span>
+<span class="va">curve_side_left</span> <span class="op">&lt;-</span> <span class="va">min_x_point</span> <span class="op">%&gt;%</span>
+  <span class="fu">add_row</span><span class="op">(</span><span class="va">min_x_point</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0.5</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
+  <span class="fu">arrange</span><span class="op">(</span><span class="va">y</span><span class="op">)</span>
+
+<span class="co">##Slap all of them together into one dataframe IN ORDER (top,right,bottom,left)</span>
+<span class="va">wave</span> <span class="op">&lt;-</span> <span class="fu">bind_rows</span><span class="op">(</span><span class="va">curve_top</span>,<span class="va">curve_side_right</span>,<span class="va">curve_bottom</span>,<span class="va">curve_side_left</span><span class="op">)</span>
+
+<span class="co">##View the entire thing====</span>
+<span class="va">wave</span> <span class="op">%&gt;%</span>
+  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x<span class="op">=</span><span class="va">x</span>, y<span class="op">=</span><span class="va">y</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
+  <span class="fu">geom_polygon</span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<p><img src="reference/figures/README-unnamed-chunk-10-1.png" width="100%"></p>
 </div>
 </div>
 
