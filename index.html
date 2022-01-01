@@ -411,42 +411,6 @@ ggplot() +
   <span class="fu">theme_void</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span>
   <span class="fu">theme</span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-9-1.png" width="100%"></p>
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="co">##Creating the "top" of our wave polygon====</span>
-<span class="va">curve_top</span> <span class="op">&lt;-</span> <span class="fu">tibble</span><span class="op">(</span>x <span class="op">=</span> <span class="va">wave_theta</span>,
-                    y <span class="op">=</span> <span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html" class="external-link">sin</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">*</span><span class="fu"><a href="https://rdrr.io/r/base/Trig.html" class="external-link">cos</a></span><span class="op">(</span><span class="va">wave_theta</span><span class="op">)</span><span class="op">)</span><span class="op">+</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">exp</a></span><span class="op">(</span><span class="va">x</span><span class="op">*</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">arrange</span><span class="op">(</span><span class="va">x</span><span class="op">)</span>
-
-<span class="co">##Grab the max X value in the wave from the top wave====</span>
-<span class="va">max_x_point</span> <span class="op">&lt;-</span> <span class="va">curve_top</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">curve_top</span><span class="op">$</span><span class="va">x</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">curve_top</span><span class="op">$</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>,<span class="op">]</span>
-
-
-<span class="co">##Create a subset of curve_top to create a "side" of the wave====</span>
-<span class="va">curve_side_right</span> <span class="op">&lt;-</span> <span class="va">max_x_point</span> <span class="op">%&gt;%</span>
-  <span class="fu">add_row</span><span class="op">(</span><span class="va">max_x_point</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0.5</span><span class="op">)</span><span class="op">)</span><span class="op">%&gt;%</span>
-  <span class="fu">arrange</span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">y</span><span class="op">)</span><span class="op">)</span>
-
-<span class="co">##Create a copy of the curve_top dataset with the y values decreased by .5====</span>
-<span class="va">curve_bottom</span> <span class="op">&lt;-</span> <span class="va">curve_top</span> <span class="op">%&gt;%</span>
-  <span class="fu">mutate</span><span class="op">(</span>y <span class="op">=</span> <span class="va">y</span> <span class="op">-</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">arrange</span><span class="op">(</span><span class="fu">desc</span><span class="op">(</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>
-
-<span class="co">##Grab the min X value in the wave from the top wave====</span>
-<span class="va">min_x_point</span> <span class="op">&lt;-</span> <span class="va">curve_top</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/which.html" class="external-link">which</a></span><span class="op">(</span><span class="va">curve_top</span><span class="op">$</span><span class="va">x</span> <span class="op">==</span> <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">min</a></span><span class="op">(</span><span class="va">curve_top</span><span class="op">$</span><span class="va">x</span><span class="op">)</span><span class="op">)</span>,<span class="op">]</span>
-
-<span class="co">##Create a side that will connect curve_top and curve_bottom on the left side====</span>
-<span class="va">curve_side_left</span> <span class="op">&lt;-</span> <span class="va">min_x_point</span> <span class="op">%&gt;%</span>
-  <span class="fu">add_row</span><span class="op">(</span><span class="va">min_x_point</span> <span class="op">-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0.5</span><span class="op">)</span><span class="op">)</span> <span class="op">%&gt;%</span>
-  <span class="fu">arrange</span><span class="op">(</span><span class="va">y</span><span class="op">)</span>
-
-<span class="co">##Slap all of them together into one dataframe IN ORDER (top,right,bottom,left)</span>
-<span class="va">wave</span> <span class="op">&lt;-</span> <span class="fu">bind_rows</span><span class="op">(</span><span class="va">curve_top</span>,<span class="va">curve_side_right</span>,<span class="va">curve_bottom</span>,<span class="va">curve_side_left</span><span class="op">)</span>
-
-<span class="co">##View the entire thing====</span>
-<span class="va">wave</span> <span class="op">%&gt;%</span>
-  <span class="fu">ggplot</span><span class="op">(</span><span class="fu">aes</span><span class="op">(</span>x<span class="op">=</span><span class="va">x</span>, y<span class="op">=</span><span class="va">y</span><span class="op">)</span><span class="op">)</span><span class="op">+</span>
-  <span class="fu">geom_polygon</span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<p><img src="reference/figures/README-unnamed-chunk-10-1.png" width="100%"></p>
 </div>
 </div>
 
