@@ -31,6 +31,66 @@ remotes::install_github("paezha/MexBrewer")
 
 ## Artists
 
+### Electa Arenal
+
+#### Revolución
+
+This palette is called `Revolucion`.
+
+```{r revolucion, echo=FALSE, out.width="400px", fig.cap="Revolucion"}
+knitr::include_graphics("man/figures/electa_arenal_revolucion.jpg")
+```
+
+```{r revolucion-palette, echo=FALSE, out.width="185px", fig.cap="Revolucion"}
+knitr::include_graphics("man/figures/revolucion.png")
+```
+
+***
+
+### María Izquierdo
+
+#### Alacena
+
+This palette is called `Alacena`.
+
+```{r alacena, echo=FALSE, out.width="400px", fig.cap="Alacena"}
+knitr::include_graphics("man/figures/maria_izquierdo_alacena.jpg")
+```
+
+```{r alacena-palette, echo=FALSE, out.width="185px", fig.cap="Alacena"}
+knitr::include_graphics("man/figures/alacena.png")
+```
+
+#### La Tierra
+
+This palette is called `Tierra`.
+
+```{r tierra, echo=FALSE, out.width="400px", fig.cap="Tiera"}
+knitr::include_graphics("man/figures/maria_izquierdo_tierra.jpg")
+```
+
+```{r tierra-palette, echo=FALSE, out.width="185px", fig.cap="Tierra"}
+knitr::include_graphics("man/figures/tierra.png")
+```
+
+***
+
+### Fanny Rabel
+
+#### La Ronda del Tiempo
+
+This palette is called `Ronda`.
+
+```{r ronda, echo=FALSE, out.width="400px", fig.cap="Ronda"}
+knitr::include_graphics("man/figures/fanny_rabel_ronda.jpg")
+```
+
+```{r ronda-palette, echo=FALSE, out.width="185px", fig.cap="Ronda"}
+knitr::include_graphics("man/figures/ronda.png")
+```
+
+***
+
 ### Aurora Reyes
 
 #### El atentado a las maestras rurales
@@ -63,34 +123,6 @@ knitr::include_graphics("man/figures/concha.png")
 
 ```{r frida-palette, echo=FALSE, out.width="185px", fig.cap="Frida"}
 knitr::include_graphics("man/figures/frida.png")
-```
-
-***
-
-### María Izquierdo
-
-#### Alacena
-
-This palette is called `Alacena`.
-
-```{r alacena, echo=FALSE, out.width="400px", fig.cap="Alacena"}
-knitr::include_graphics("man/figures/maria_izquierdo_alacena.jpg")
-```
-
-```{r alacena-palette, echo=FALSE, out.width="185px", fig.cap="Alacena"}
-knitr::include_graphics("man/figures/alacena.png")
-```
-
-#### La Tierra
-
-This palette is called `Tierra`.
-
-```{r tierra, echo=FALSE, out.width="400px", fig.cap="Tiera"}
-knitr::include_graphics("man/figures/maria_izquierdo_tierra.jpg")
-```
-
-```{r tierra-palette, echo=FALSE, out.width="185px", fig.cap="Tierra"}
-knitr::include_graphics("man/figures/tierra.png")
 ```
 
 ***

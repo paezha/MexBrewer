@@ -26,6 +26,50 @@ remotes::install_github("paezha/MexBrewer")
 
 ## Artists
 
+### Electa Arenal
+
+#### Revolución
+
+This palette is called `Revolucion`.
+
+<img src="man/figures/electa_arenal_revolucion.jpg" title="Revolucion" alt="Revolucion" width="400px" />
+
+<img src="man/figures/revolucion.png" title="Revolucion" alt="Revolucion" width="185px" />
+
+------------------------------------------------------------------------
+
+### María Izquierdo
+
+#### Alacena
+
+This palette is called `Alacena`.
+
+<img src="man/figures/maria_izquierdo_alacena.jpg" title="Alacena" alt="Alacena" width="400px" />
+
+<img src="man/figures/alacena.png" title="Alacena" alt="Alacena" width="185px" />
+
+#### La Tierra
+
+This palette is called `Tierra`.
+
+<img src="man/figures/maria_izquierdo_tierra.jpg" title="Tiera" alt="Tiera" width="400px" />
+
+<img src="man/figures/tierra.png" title="Tierra" alt="Tierra" width="185px" />
+
+------------------------------------------------------------------------
+
+### Fanny Rabel
+
+#### La Ronda del Tiempo
+
+This palette is called `Ronda`.
+
+<img src="man/figures/fanny_rabel_ronda.jpg" title="Ronda" alt="Ronda" width="400px" />
+
+<img src="man/figures/ronda.png" title="Ronda" alt="Ronda" width="185px" />
+
+------------------------------------------------------------------------
+
 ### Aurora Reyes
 
 #### El atentado a las maestras rurales
@@ -48,26 +92,6 @@ This work of Aurora Rivera inspired three palettes, called `Aurora`,
 <img src="man/figures/concha.png" title="Concha" alt="Concha" width="185px" />
 
 <img src="man/figures/frida.png" title="Frida" alt="Frida" width="185px" />
-
-------------------------------------------------------------------------
-
-### María Izquierdo
-
-#### Alacena
-
-This palette is called `Alacena`.
-
-<img src="man/figures/maria_izquierdo_alacena.jpg" title="Alacena" alt="Alacena" width="400px" />
-
-<img src="man/figures/alacena.png" title="Alacena" alt="Alacena" width="185px" />
-
-#### La Tierra
-
-This palette is called `Tierra`.
-
-<img src="man/figures/maria_izquierdo_tierra.jpg" title="Tiera" alt="Tiera" width="400px" />
-
-<img src="man/figures/tierra.png" title="Tierra" alt="Tierra" width="185px" />
 
 ------------------------------------------------------------------------
 

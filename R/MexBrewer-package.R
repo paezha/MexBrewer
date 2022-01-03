@@ -32,11 +32,11 @@ NULL
 #'
 #' @export
 MexPalettes <- list(
-  Alacena = list(c("#693829", "#894b33", "#a56a3e", "#cfb267", "#d9c5b6", "#9ca9ba", "#5480b5", "#3d619d", "#405a95", "#485ca6"),
+  Alacena = list(c("#693829", "#894b33", "#a56a3e", "#cfb267", "#d9c5b6", "#9ca9ba", "#5480b5", "#3d619d", "#405a95", "#345084"),
                   c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
                   sequential = FALSE),
-  Atentado = list(c("#171e15", "#445452", "#b4bcb4", "#b9afa8", "#e8cfab", "#f5bc5c", "#cc4c24", "#481904"),
-                  c(1, 2, 3, 4, 5, 6, 7, 8),
+  Atentado = list(c("#171e15", "#32373a", "#5e5752", "#9f9994", "#ccc2b5", "#e8cfab", "#f5bc5c", "#e2853a", "#cc4c24", "#3f1606"),
+                  c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
                   sequential = FALSE),
   Aurora = list(c("#e7c7a8", "#c29786", "#874d4a", "#5f2f2d", "#3b141a", "#331718", "#27170b"),
                 c(1, 2, 3, 4, 5, 6, 7),
@@ -47,6 +47,12 @@ MexPalettes <- list(
   Frida = list(c("#d6d8d0", "#a4abb0", "#4c6c94", "#435e7f", "#2f415f", "#232c43", "#0b1829"),
                c(1, 2, 3, 4, 5, 6, 7),
                sequential = TRUE),
+  Revolucion = list(c("#871c0f", "#af2213", "#d9792e", "#f4c659", "#f9f2d8", "#f0f6eb", "#6fc0ba", "#368990", "#244e57", "#22394a"),
+               c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+               sequential = FALSE),
+  Ronda = list(c("#49295f", "#894d9f", "#bd6dc2", "#da91e0", "#e2a9dc", "#c19a8d", "#b2877d", "#a26867", "#964754", "#7e3146"),
+               c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10),
+               sequential = FALSE),
   Tierra = list(c("#ccc5c3", "#8d7e4f", "#7a6431", "#69542b", "#573c22", "#4f330a", "#3b221a"),
                c(1, 2, 3, 4, 5, 6, 7),
                sequential = TRUE)
@@ -60,7 +66,8 @@ MexPalettes <- list(
 #' These are a handful of color palettes from Mexican muralists.
 #'
 #' @param name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Tierra}
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}
+#' \code{Revolucion}, \code{Ronda}, \code{Tierra}
 #' @param n Number of desired colors. If number of requested colors is beyond the scope of the palette,
 #' colors are automatically interpolated. If n is not provided, the length of the palette is used.
 #' @param type Either "continuous" or "discrete". Use continuous if you want to automatically
@@ -138,7 +145,8 @@ sequential_palettes <- c("Aurora", "Concha", "Frida", "Tierra")
 #' Checks whether a palette is Sequential.
 #'
 #' @param palette.name Name of Palette. Choices are:
-#' \code{Alacena},\code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Tierra}
+#' \code{Alacena},\code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}
+#' \code{Revolucion}, \code{Ronda}, \code{Tierra}
 #' @examples
 #' sequential.palette("Aurora")
 #' @return TRUE/FALSE if palette is sequential

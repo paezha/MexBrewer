@@ -8,7 +8,8 @@ mex.brewer(name, n, type = c("discrete", "continuous"))
 }
 \arguments{
 \item{name}{Name of Palette. Choices are:
-\code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Tierra}}
+\code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}
+\code{Revolucion}, \code{Ronda}, \code{Tierra}}
 
 \item{n}{Number of desired colors. If number of requested colors is beyond the scope of the palette,
 colors are automatically interpolated. If n is not provided, the length of the palette is used.}
