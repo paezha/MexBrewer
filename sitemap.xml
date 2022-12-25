@@ -22,6 +22,9 @@
     <loc>https://paezha.github.io/MexBrewer/reference/MexPalettes.html</loc>
   </url>
   <url>
+    <loc>https://paezha.github.io/MexBrewer/reference/df_mxstate_2020.html</loc>
+  </url>
+  <url>
     <loc>https://paezha.github.io/MexBrewer/reference/index.html</loc>
   </url>
   <url>
@@ -29,6 +32,24 @@
   </url>
   <url>
     <loc>https://paezha.github.io/MexBrewer/reference/mx_estados.html</loc>
+  </url>
+  <url>
+    <loc>https://paezha.github.io/MexBrewer/reference/scale_color_mex_c.html</loc>
+  </url>
+  <url>
+    <loc>https://paezha.github.io/MexBrewer/reference/scale_color_mex_d.html</loc>
+  </url>
+  <url>
+    <loc>https://paezha.github.io/MexBrewer/reference/scale_colour_mex_c.html</loc>
+  </url>
+  <url>
+    <loc>https://paezha.github.io/MexBrewer/reference/scale_colour_mex_d.html</loc>
+  </url>
+  <url>
+    <loc>https://paezha.github.io/MexBrewer/reference/scale_fill_mex_c.html</loc>
+  </url>
+  <url>
+    <loc>https://paezha.github.io/MexBrewer/reference/scale_fill_mex_d.html</loc>
   </url>
   <url>
     <loc>https://paezha.github.io/MexBrewer/reference/sequential.palette.html</loc>
