@@ -7,10 +7,12 @@
 <!-- badges: end -->
 
 MexBrewer is a package with color palettes inspired by the works of
-Mexican muralists. The inspiration for this package was
-[{MetBrewer}](https://github.com/BlakeRMills/MetBrewer) by [Blake
-Mills](brm2143@columbia.edu). The structure of the package and coding,
-like {MetBrewer}, is based on
+Mexican painters and muralists. This package draws inspiration and
+heavily from the code of
+[{MetBrewer}](https://github.com/BlakeRMills/MetBrewer), the package
+with color palettes form the Metropolitan Museum of Art of New York,
+created by [Blake R. Mills](https://github.com/BlakeRMills/). The
+structure of the package and coding, like {MetBrewer}, are based on
 [{PNWColors}](https://github.com/jakelawlor/PNWColors) and
 [{wesanderson}](https://github.com/karthik/wesanderson).
 
@@ -32,9 +34,93 @@ remotes::install_github("paezha/MexBrewer")
 
 This palette is called `Revolucion`.
 
-<img src="man/figures/electa_arenal_revolucion.jpg" title="Revolucion" alt="Revolucion" width="400px" />
+<div class="figure">
 
-<img src="man/figures/revolucion.png" title="Revolucion" alt="Revolucion" width="185px" />
+<img src="man/figures/electa_arenal_revolucion.jpg" alt="Revolucion" width="400px" />
+<p class="caption">
+Revolucion
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/revolucion.png" alt="Revolucion" width="185px" />
+<p class="caption">
+Revolucion
+</p>
+
+</div>
+
+------------------------------------------------------------------------
+
+### Olga Costa
+
+#### Naturaleza
+
+This palette is called `Naturaleza`.
+
+<div class="figure">
+
+<img src="man/figures/olga_costa_naturaleza.jpg" alt="Naturaleza" width="400px" />
+<p class="caption">
+Naturaleza
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/naturaleza.png" alt="Naturaleza" width="185px" />
+<p class="caption">
+Naturaleza
+</p>
+
+</div>
+
+#### Ofrenda
+
+This palette is called `Ofrenda`.
+
+<div class="figure">
+
+<img src="man/figures/olga_costa_ofrenda.jpg" alt="Ofrenda" width="400px" />
+<p class="caption">
+Ofrenda
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/ofrenda.png" alt="Ofrenda" width="185px" />
+<p class="caption">
+Ofrenda
+</p>
+
+</div>
+
+#### Ofrenda
+
+This palette is called `Vendedora`.
+
+<div class="figure">
+
+<img src="man/figures/olga_costa_vendedora.jpg" alt="Vendedora" width="400px" />
+<p class="caption">
+Vendedora
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/vendedora.png" alt="Vendedora" width="185px" />
+<p class="caption">
+Vendedora
+</p>
+
+</div>
 
 ------------------------------------------------------------------------
 
@@ -44,17 +130,71 @@ This palette is called `Revolucion`.
 
 This palette is called `Alacena`.
 
-<img src="man/figures/maria_izquierdo_alacena.jpg" title="Alacena" alt="Alacena" width="400px" />
+<div class="figure">
 
-<img src="man/figures/alacena.png" title="Alacena" alt="Alacena" width="185px" />
+<img src="man/figures/maria_izquierdo_alacena.jpg" alt="Alacena" width="400px" />
+<p class="caption">
+Alacena
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/alacena.png" alt="Alacena" width="185px" />
+<p class="caption">
+Alacena
+</p>
+
+</div>
 
 #### La Tierra
 
 This palette is called `Tierra`.
 
-<img src="man/figures/maria_izquierdo_tierra.jpg" title="Tiera" alt="Tiera" width="400px" />
+<div class="figure">
 
-<img src="man/figures/tierra.png" title="Tierra" alt="Tierra" width="185px" />
+<img src="man/figures/maria_izquierdo_tierra.jpg" alt="Tiera" width="400px" />
+<p class="caption">
+Tiera
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/tierra.png" alt="Tierra" width="185px" />
+<p class="caption">
+Tierra
+</p>
+
+</div>
+
+------------------------------------------------------------------------
+
+### Rina Lazo
+
+#### Venerable Abuelo Maiz
+
+This palette is called `Maiz`.
+
+<div class="figure">
+
+<img src="man/figures/rina_lazo_maiz.jpg" alt="Maiz" width="400px" />
+<p class="caption">
+Maiz
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/maiz.png" alt="Maiz" width="185px" />
+<p class="caption">
+Maiz
+</p>
+
+</div>
 
 ------------------------------------------------------------------------
 
@@ -64,9 +204,23 @@ This palette is called `Tierra`.
 
 This palette is called `Ronda`.
 
-<img src="man/figures/fanny_rabel_ronda.jpg" title="Ronda" alt="Ronda" width="400px" />
+<div class="figure">
 
-<img src="man/figures/ronda.png" title="Ronda" alt="Ronda" width="185px" />
+<img src="man/figures/fanny_rabel_ronda.jpg" alt="Ronda" width="400px" />
+<p class="caption">
+Ronda
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/ronda.png" alt="Ronda" width="185px" />
+<p class="caption">
+Ronda
+</p>
+
+</div>
 
 ------------------------------------------------------------------------
 
@@ -76,32 +230,73 @@ This palette is called `Ronda`.
 
 This palette is called `Atentado`.
 
-<img src="man/figures/aurora_reyes_atentado.jpeg" title="Aurora, Concha, y Frida" alt="Aurora, Concha, y Frida" width="400px" />
+<div class="figure">
 
-<img src="man/figures/atentado.png" title="Aurora" alt="Aurora" width="185px" />
+<img src="man/figures/aurora_reyes_atentado.jpeg" alt="Aurora, Concha, y Frida" width="400px" />
+<p class="caption">
+Aurora, Concha, y Frida
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/atentado.png" alt="Aurora" width="185px" />
+<p class="caption">
+Aurora
+</p>
+
+</div>
 
 #### Aurora, Concha, y Frida
 
 This work of Aurora Rivera inspired three palettes, called `Aurora`,
 `Concha`, and `Frida`.
 
-<img src="man/figures/aurora_concha_frida.jpg" title="Aurora, Concha, y Frida" alt="Aurora, Concha, y Frida" width="400px" />
+<div class="figure">
 
-<img src="man/figures/aurora.png" title="Aurora" alt="Aurora" width="185px" />
+<img src="man/figures/aurora_concha_frida.jpg" alt="Aurora, Concha, y Frida" width="400px" />
+<p class="caption">
+Aurora, Concha, y Frida
+</p>
 
-<img src="man/figures/concha.png" title="Concha" alt="Concha" width="185px" />
+</div>
 
-<img src="man/figures/frida.png" title="Frida" alt="Frida" width="185px" />
+<div class="figure">
+
+<img src="man/figures/aurora.png" alt="Aurora" width="185px" />
+<p class="caption">
+Aurora
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/concha.png" alt="Concha" width="185px" />
+<p class="caption">
+Concha
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/frida.png" alt="Frida" width="185px" />
+<p class="caption">
+Frida
+</p>
+
+</div>
 
 ------------------------------------------------------------------------
 
 ## Examples
 
 ``` r
-library(aRtsy) # Ijeamaka Anyene's package for generative art 
+library(aRtsy) # Koen Derks' package for generative art 
 library(flametree) # Danielle Navarro's package for generative art
 library(MexBrewer)
-library(mxmaps)
 library(sf)
 library(tidyverse)
 ```
@@ -116,30 +311,22 @@ data("df_mxstate_2020") # Data from {mxmaps }with population statistics at the s
 Join population statistics to state boundaries:
 
 ``` r
-mx_estados <- mx_estados %>%
-  left_join(df_mxstate_2015%>%
-              dplyr::transmute(pop2015 = pop, # Population by state in 2015
-                               am2015 = afromexican, # Afromexican population by state in 2015
-                               state_name),
-            by = c("nombre" = "state_name")) %>%
-  left_join(df_mxstate_2020 %>%
+mx_estados <- mx_estados |>
+  left_join(df_mxstate_2020 |>
               #Percentage of population that speak an indigenous language
-              mutate(pct_ind_lang = indigenous_language/pop * 100) %>% 
+              mutate(pct_ind_lang = indigenous_language/pop * 100) |> 
               dplyr::transmute(pop2020 = pop,
                                am2020 = afromexican,
                                state_name, 
                                pct_ind_lang),
-            by = c("nombre" = "state_name")) %>%
-  # Calculate the change in popualtion and afromexican population between 2015 and 2020
-  mutate(delta_pop = (pop2020 - pop2015)/pop2015,
-         delta_am = (am2020 - am2015)/am2015)
+            by = c("nombre" = "state_name"))
 ```
 
 Distribution of population by geographic region in Mexico:
 
 ``` r
 ggplot(data = mx_estados,
-       aes(x = region, y = pop2015, fill = region)) +
+       aes(x = region, y = pop2020, fill = region)) +
   geom_boxplot() +
   scale_fill_manual(values = mex.brewer("Concha", n = 5)) +
   theme_minimal()
@@ -162,35 +349,6 @@ ggplot() +
 
 <img src="man/figures/README-indigenous-languages-1.png" width="100%" />
 
-Percentage change of population by state between 2015 and 2020:
-
-``` r
-ggplot() +
-  geom_sf(data = mx_estados,
-          aes(fill = delta_pop),
-          color = "white",
-          size = 0.08) +
-  scale_fill_gradientn(colors = mex.brewer("Atentado")) +
-  theme_minimal()
-```
-
-<img src="man/figures/README-population-change-1.png" width="100%" />
-
-Percentage change of afromexican population by state between 2015 and
-2020:
-
-``` r
-ggplot() +
-  geom_sf(data = mx_estados,
-          aes(fill = delta_am),
-          color = "white",
-          size = 0.08) +
-  scale_fill_gradientn(colors = mex.brewer("Alacena")) +
-  theme_minimal()
-```
-
-<img src="man/figures/README-afromexican-population-change-1.png" width="100%" />
-
 # Some Rtistry
 
 ### Danielle Navarro’s [{flametree}](https://github.com/djnavarro/flametree)
@@ -199,7 +357,7 @@ The following three images were created using the {flametree} package.
 
 ``` r
 # pick some colours
-shades <- MexBrewer::mex.brewer("Tierra") %>%
+shades <- MexBrewer::mex.brewer("Vendedora") |>
   as.vector()
 
 # data structure defining the trees
@@ -208,7 +366,7 @@ dat <- flametree_grow(seed = 3563,
                       trees = 10)
 
 # draw the plot
-dat %>% 
+dat |> 
   flametree_plot(
     background = shades[1],
     palette = shades[2:length(shades)], 
@@ -220,7 +378,7 @@ dat %>%
 
 ``` r
 # pick some colours
-shades <- MexBrewer::mex.brewer("Concha") %>%
+shades <- MexBrewer::mex.brewer("Concha") |>
   as.vector()
 
 # data structure defining the trees
@@ -229,7 +387,7 @@ dat <- flametree_grow(seed = 3536,
                       trees = 6)
 
 # draw the plot
-dat %>% 
+dat |> 
   flametree_plot(
     background = shades[1],
     palette = rev(shades[2:length(shades)]), 
@@ -241,7 +399,7 @@ dat %>%
 
 ``` r
 # pick some colours
-shades <- MexBrewer::mex.brewer("Frida") %>%
+shades <- MexBrewer::mex.brewer("Maiz") |>
   as.vector()
 
 # data structure defining the trees
@@ -250,7 +408,7 @@ dat <- flametree_grow(seed = 3653,
                       trees = 6)
 
 # draw the plot
-dat %>% 
+dat |> 
   flametree_plot(
     background = shades[1],
     palette = shades[2:length(shades)], 
@@ -295,7 +453,7 @@ canvas_squares(colors = mex.brewer("Alacena"),
 Mandelbrot’s set:
 
 ``` r
-canvas_mandelbrot(colors = mex.brewer("Aurora"), 
+canvas_mandelbrot(colors = mex.brewer("Naturaleza"), 
                   zoom = 8,
                   iterations = 200,
                   resolution = 500)
@@ -315,10 +473,10 @@ wave_theta <- seq(from = -pi,
                   by = 0.01) 
 
 # Create waves using functions
-wave_1 <- data.frame(x = wave_theta) %>% 
+wave_1 <- data.frame(x = wave_theta) |> 
   mutate(y = (sin(x) * cos(2 * wave_theta) + exp(x * 2)))
 
-wave_2 <- data.frame(x = wave_theta) %>%
+wave_2 <- data.frame(x = wave_theta) |>
   mutate(y = (0.5 * sin(x) * cos(2.0 * wave_theta) + exp(x)) - 0.5)
 ```
 
@@ -358,7 +516,7 @@ wave_maker <- function(wave_df, n, shift){
   #Create a for loop to iteratively make "n" waves shifted a distance `shift` from each other #
   for(i in seq_along(1:n)){
     
-    wave_list[[i]] <- wave_df %>%
+    wave_list[[i]] <- wave_df |>
       mutate(y = y - (shift * i),
              group = i)  
   }
@@ -372,16 +530,16 @@ Create layered waves using the data frames with the wave functions
 above:
 
 ``` r
-wave_layers <- rbind(wave_1 %>%
+wave_layers <- rbind(wave_1 |>
                        wave_maker(n = 5, 
                                   shift = 0.075),
-                     wave_2 %>%
+                     wave_2 |>
                        wave_maker(n = 5, 
-                                  shift = 0.075) %>%
+                                  shift = 0.075) |>
                        mutate(group = group + 5)) # adjust the group counter to identify waves uniquely
 ```
 
-Plot layered waves using cartesian coordinates and palette `Alacena`:
+Plot layered waves using cartesian coordinates and palette `Ofrenda`:
 
 ``` r
 ggplot(wave_layers) +
@@ -390,8 +548,8 @@ ggplot(wave_layers) +
                 ymin = min(y) - 0.50,
                 ymax = max(y) + 0.30 ),
             size = 2.5,
-            color = mex.brewer("Alacena")[6],
-            fill = mex.brewer("Alacena")[4]) +
+            color = mex.brewer("Ofrenda")[6],
+            fill = mex.brewer("Ofrenda")[4]) +
   geom_rect(aes(xmin = -pi, 
                 xmax = -0.0, 
                 ymin = min(y) - 0.50,
@@ -406,7 +564,7 @@ ggplot(wave_layers) +
                   fill = group),
               color = "black",
               size = 0.5) + 
-  scale_fill_gradientn(colors = mex.brewer("Alacena"))+
+  scale_fill_gradientn(colors = mex.brewer("Ofrenda"))+
   theme_void() +
   theme(legend.position = "none")
 ```

@@ -4,12 +4,12 @@
 \alias{sequential.palette}
 \title{Sequential Palette Check}
 \usage{
-sequential.palette(palette.name)
+sequential.palette(palette_name)
 }
 \arguments{
-\item{palette.name}{Name of Palette. Choices are:
-\code{Alacena},\code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}
-\code{Revolucion}, \code{Ronda}, \code{Tierra}}
+\item{palette_name}{Name of Palette. Choices are:
+\code{Alacena},\code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+\code{Revolucion}, \code{Ronda}, \code{Tierra}, \code{Vendedora}.}
 }
 \value{
 TRUE/FALSE if palette is sequential

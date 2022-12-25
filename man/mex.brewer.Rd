@@ -4,28 +4,43 @@
 \alias{mex.brewer}
 \title{Mex Palette Generator}
 \usage{
-mex.brewer(name, n, type = c("discrete", "continuous"))
+mex.brewer(
+  palette_name,
+  n,
+  type = c("discrete", "continuous"),
+  direction = c(1, -1),
+  override.order = FALSE
+)
 }
 \arguments{
-\item{name}{Name of Palette. Choices are:
-\code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}
-\code{Revolucion}, \code{Ronda}, \code{Tierra}}
+\item{palette_name}{Name of Palette. Choices are:
+\code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+\code{Revolucion}, \code{Ronda}, \code{Tierra}, \code{Vendedora}.}
 
 \item{n}{Number of desired colors. If number of requested colors is beyond the scope of the palette,
 colors are automatically interpolated. If n is not provided, the length of the palette is used.}
 
 \item{type}{Either "continuous" or "discrete". Use continuous if you want to automatically
 interpolate between colors.}
+
+\item{direction}{Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed}
+
+\item{override.order}{Colors are picked from palette to maximize readability and aesthetics. This means
+that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
+colors are selected in sequential order from the full palette instead. Default is FALSE.}
 }
 \value{
 A vector of colors.
 }
 \description{
 These are a handful of color palettes from Mexican muralists.
+Complete list of palette colors and the works that inspired them can be found \href{https://paezha.github.io/MexBrewer}{here}.
 }
 \examples{
 mex.brewer("Atentado")
+
 mex.brewer("Concha", 6)
+
 mex.brewer("Frida", 10, "continuous")
 }
 \keyword{colors}

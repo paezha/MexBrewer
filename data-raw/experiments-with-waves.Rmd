@@ -7,11 +7,20 @@ output: html_document
 ```{r load-packges, message=FALSE, warning=FALSE}
 library(aRtsy) # Ijeamaka Anyene's package for generative art 
 library(flametree) # Danielle Navarro's package for generative art
-library(MexBrewer)
-library(mxmaps)
-library(sf)
-library(tidyverse)
+library(MexBrewer) # Color Palettes Inspired by Works of Mexican Muralists
+library(sf) # Simple Features for R
+library(tidyverse) # Easily Install and Load the 'Tidyverse'
 ```
+
+```{r}
+load("df_mxstate_2020.RData")
+```
+
+```{r}
+usethis::use_data(df_mxstate_2020, overwrite = TRUE)
+```
+
+
 
 <!--
 
@@ -192,3 +201,4 @@ ggplot(wave_layers) +
 ```
 
 -->
+
