@@ -5,15 +5,15 @@
 \alias{MexPalettes}
 \title{Complete list of palettes}
 \format{
-An object of class \code{list} of length 12.
+An object of class \code{list} of length 15.
 }
 \usage{
 MexPalettes
 }
 \description{
 Use names(MexPalettes) to return all possible palette names. Current choices are:
-\code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Maiz}, \code{Naturaleza}, \code{Ofrenda},
-\code{Revolucion}, \code{Ronda}, \code{Tierra}, \code{Vendedora}.
+\code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz}, \code{Naturaleza}, \code{Ofrenda},
+\code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
 Use \code{\link{mex.brewer}} to construct palettes.
 }
 \keyword{datasets}

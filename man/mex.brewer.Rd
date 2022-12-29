@@ -14,8 +14,8 @@ mex.brewer(
 }
 \arguments{
 \item{palette_name}{Name of Palette. Choices are:
-\code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
-\code{Revolucion}, \code{Ronda}, \code{Tierra}, \code{Vendedora}.}
+\code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+\code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.}
 
 \item{n}{Number of desired colors. If number of requested colors is beyond the scope of the palette,
 colors are automatically interpolated. If n is not provided, the length of the palette is used.}

@@ -8,8 +8,8 @@ scale_fill_mex_d(palette_name, direction = 1, override.order = FALSE, ...)
 }
 \arguments{
 \item{palette_name}{Name of Palette. Choices are:
-\code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
-\code{Revolucion}, \code{Ronda}, \code{Tierra}, \code{Vendedora}.}
+\code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+\code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.}
 
 \item{direction}{Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed}
 

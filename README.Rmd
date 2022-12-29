@@ -76,7 +76,7 @@ knitr::include_graphics("man/figures/olga_costa_ofrenda.jpg")
 knitr::include_graphics("man/figures/ofrenda.png")
 ```
 
-#### Ofrenda
+#### Vendedora
 
 This palette is called `Vendedora`.
 
@@ -182,6 +182,37 @@ knitr::include_graphics("man/figures/concha.png")
 
 ```{r frida-palette, echo=FALSE, out.width="185px", fig.cap="Frida"}
 knitr::include_graphics("man/figures/frida.png")
+```
+***
+
+### Remedios Varo
+
+#### La Huida
+
+This palette is called `Huida`.
+
+```{r echo=FALSE, out.width="400px", fig.cap="La Huida"}
+knitr::include_graphics("man/figures/remedios_varo_huida.jpg")
+```
+
+```{r echo=FALSE, out.width="185px", fig.cap="Huida"}
+knitr::include_graphics("man/figures/huida.png")
+```
+
+#### Taurus
+
+This work of Remedios Varo inspired two palettes, called `Taurus1` and `Taurus2`.
+
+```{r Taurus, echo=FALSE, out.width="400px", fig.cap="Taurus"}
+knitr::include_graphics("man/figures/remedios_varo_taurus.jpg")
+```
+
+```{r taurus1-palette, echo=FALSE, out.width="185px", fig.cap="Taurus1"}
+knitr::include_graphics("man/figures/taurus1.png")
+```
+
+```{r taurus2-palette, echo=FALSE, out.width="185px", fig.cap="Taurus2"}
+knitr::include_graphics("man/figures/taurus2.png")
 ```
 
 ***

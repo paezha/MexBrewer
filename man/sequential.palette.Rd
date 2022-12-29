@@ -8,8 +8,8 @@ sequential.palette(palette_name)
 }
 \arguments{
 \item{palette_name}{Name of Palette. Choices are:
-\code{Alacena},\code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
-\code{Revolucion}, \code{Ronda}, \code{Tierra}, \code{Vendedora}.}
+\code{Alacena},\code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+\code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.}
 }
 \value{
 TRUE/FALSE if palette is sequential

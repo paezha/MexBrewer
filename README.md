@@ -100,7 +100,7 @@ Ofrenda
 
 </div>
 
-#### Ofrenda
+#### Vendedora
 
 This palette is called `Vendedora`.
 
@@ -285,6 +285,64 @@ Concha
 <img src="man/figures/frida.png" alt="Frida" width="185px" />
 <p class="caption">
 Frida
+</p>
+
+</div>
+
+------------------------------------------------------------------------
+
+### Remedios Varo
+
+#### La Huida
+
+This palette is called `Huida`.
+
+<div class="figure">
+
+<img src="man/figures/remedios_varo_huida.jpg" alt="La Huida" width="400px" />
+<p class="caption">
+La Huida
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/huida.png" alt="Huida" width="185px" />
+<p class="caption">
+Huida
+</p>
+
+</div>
+
+#### Taurus
+
+This work of Remedios Varo inspired two palettes, called `Taurus1` and
+`Taurus2`.
+
+<div class="figure">
+
+<img src="man/figures/remedios_varo_taurus.jpg" alt="Taurus" width="400px" />
+<p class="caption">
+Taurus
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/taurus1.png" alt="Taurus1" width="185px" />
+<p class="caption">
+Taurus1
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/taurus2.png" alt="Taurus2" width="185px" />
+<p class="caption">
+Taurus2
 </p>
 
 </div>
@@ -497,7 +555,7 @@ ggplot() +
               fill = "blue")
 ```
 
-<img src="man/figures/README-unnamed-chunk-5-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
 
 -->
 
@@ -569,7 +627,7 @@ ggplot(wave_layers) +
   theme(legend.position = "none")
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
 
 Plot layered waves using polar coordinates and palette `Atentado`:
 
@@ -605,4 +663,4 @@ ggplot(wave_layers) +
   theme(legend.position = "none")
 ```
 
-<img src="man/figures/README-unnamed-chunk-9-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
