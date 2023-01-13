@@ -78,7 +78,7 @@ MexPalettes <- list(
   Casita2 = list(c("#70b1e2", "#1c45da", "#cacd33", "#bb1544", "#06412f"),
                  c(1, 2, 3, 4, 5),
                  sequential = FALSE),
-  Casita3 = list(c("#0424ac", "#0f1342", "#efb540", "#411913", "#111716"),
+  Casita3 = list(c("#0424ac", "#0f1342", "#efb540", "#411913", "#202610"),
                  c(1, 2, 3, 4, 5),
                  sequential = FALSE),
   Concha = list(c("#d6d8d0", "#d4d5bf", "#708469", "#506446", "#3d4d34", "#37402b", "#2a3326"),

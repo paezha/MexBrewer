@@ -4,6 +4,28 @@
 # MexBrewer [<img src="man/figures/MexBrewer.png" align="right" width=300 />](https://paezha.github.io/MexBrewer/)
 
 <!-- badges: start -->
+
+[![CRAN
+status](https://www.r-pkg.org/badges/version/MexBrewer)](https://CRAN.R-project.org/package=MexBrewer)
+
+[![Lifecycle:
+stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
+
+[![GitHub
+Stars](https://img.shields.io/github/stars/paezha/edashop?style=social)](https://github.com/paezha/MexBrewer/stargazers)
+
+![GitHub search hit counter:
+R](https://img.shields.io/github/search/paezha/MexBrewer/R)  
+![GitHub search hit counter:
+data](https://img.shields.io/github/search/paezha/MexBrewer/rtistry)
+
+![GitHub issues](https://img.shields.io/github/issues/paezha/MexBrewer)
+![GitHub
+release](https://img.shields.io/github/release-date/paezha/MexBrewer)
+![GitHub commit
+activity](https://img.shields.io/github/commit-activity/y/paezha/MexBrewer)
+![GitHub last
+commit](https://img.shields.io/github/last-commit/paezha/MexBrewer)
 <!-- badges: end -->
 
 MexBrewer is a package with color palettes inspired by the works of

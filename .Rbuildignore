@@ -8,3 +8,4 @@
 ^\.github$
 ^data-raw$
 ^README_cache$
+^cran-comments\.md$
