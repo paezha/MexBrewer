@@ -57,7 +57,7 @@ NULL
 #' Complete list of palettes
 #'
 #' Use names(MexPalettes) to return all possible palette names. Current choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz}, \code{Naturaleza}, \code{Ofrenda},
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz}, \code{Naturaleza}, \code{Ofrenda},
 #' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
 #' Use \code{\link{mex.brewer}} to construct palettes.
 #'
@@ -72,6 +72,15 @@ MexPalettes <- list(
   Aurora = list(c("#e7c7a8", "#c29786", "#874d4a", "#5f2f2d", "#3b141a", "#331718", "#27170b"),
                 c(1, 2, 3, 4, 5, 6, 7),
                 sequential = TRUE),
+  Casita1 = list(c("#d2d5db", "#5c80fa", "#cfbe31", "#c14345", "#1b7a4f"),
+                c(1, 2, 3, 4, 5),
+                sequential = FALSE),
+  Casita2 = list(c("#70b1e2", "#1c45da", "#cacd33", "#bb1544", "#06412f"),
+                 c(1, 2, 3, 4, 5),
+                 sequential = FALSE),
+  Casita3 = list(c("#0424ac", "#0f1342", "#efb540", "#411913", "#111716"),
+                 c(1, 2, 3, 4, 5),
+                 sequential = FALSE),
   Concha = list(c("#d6d8d0", "#d4d5bf", "#708469", "#506446", "#3d4d34", "#37402b", "#2a3326"),
                 c(1, 2, 3, 4, 5, 6, 7),
                 sequential = TRUE),
@@ -119,7 +128,7 @@ MexPalettes <- list(
 #' Complete list of palette colors and the works that inspired them can be found \href{https://paezha.github.io/MexBrewer}{here}.
 #'
 #' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
 #' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
 #' @param n Number of desired colors. If number of requested colors is beyond the scope of the palette,
 #' colors are automatically interpolated. If n is not provided, the length of the palette is used.
@@ -228,7 +237,7 @@ sequential_palettes <- c("Aurora", "Concha", "Frida", "Naturaleza", "Taurus1", "
 #' Checks whether a palette is Sequential.
 #'
 #' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena},\code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+#' \code{Alacena},\code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
 #' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
 #' @examples
 #' sequential.palette("Aurora")
@@ -255,7 +264,7 @@ sequential.palette <- function(palette_name){
 #' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
 #'
 #' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
 #' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
 #' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
@@ -305,7 +314,7 @@ scale_color_mex_d <- function(palette_name, direction=1, override.order=FALSE, .
 #' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
 #'
 #' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
 #' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
 #' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
@@ -319,7 +328,7 @@ scale_color_mex_d <- function(palette_name, direction=1, override.order=FALSE, .
 #' geom_violin() +
 #' scale_fill_mex_d("Aurora")
 #' @export
-scale_fill_mex_d <- function(palette_name, direction=1, override.order=FALSE, ...){
+scale_fill_mex_d <- function(palette_name, direction = 1, override.order=FALSE, ...){
   mex.brewer.disc <- function(palette_name, direction = c(1, -1), override.order=FALSE) {
 
     `%notin%` <- Negate(`%in%`)
@@ -332,11 +341,11 @@ scale_fill_mex_d <- function(palette_name, direction=1, override.order=FALSE, ..
       stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
     }
 
-    function(n) if(direction==1 & override.order==FALSE){
-      palette[[1]][which(palette[[2]] %in% c(1:n)==TRUE)]
-    }else if(direction==-1 & override.order==FALSE){
-      rev(palette[[1]][which(palette[[2]] %in% c(1:n)==TRUE)])
-    } else if(direction==1 & override.order==TRUE){
+    function(n) if(direction == 1 & override.order == FALSE){
+      palette[[1]][which(palette[[2]] %in% c(1:n) == TRUE)]
+    }else if(direction == -1 & override.order == FALSE){
+      rev(palette[[1]][which(palette[[2]] %in% c(1:n) == TRUE)])
+    } else if(direction == 1 & override.order == TRUE){
       palette[[1]][1:n]
     } else{
       rev(palette[[1]])[1:n]
@@ -355,7 +364,7 @@ scale_fill_mex_d <- function(palette_name, direction=1, override.order=FALSE, ..
 #' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
 #'
 #' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
 #' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}
@@ -374,7 +383,7 @@ scale_color_mex_c <- function(palette_name, direction=1, ...){
     stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
   }
 
-  scale_color_gradientn(colors=mex.brewer(palette_name=palette_name, direction=direction, override.order = F),
+  scale_color_gradientn(colors = mex.brewer(palette_name = palette_name, direction = direction, override.order = F),
                         ...)
 }
 
@@ -385,7 +394,7 @@ scale_color_mex_c <- function(palette_name, direction=1, ...){
 #' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
 #'
 #' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
 #' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}
@@ -399,7 +408,7 @@ scale_fill_mex_c <- function(palette_name, direction=1, ...){
     stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
   }
 
-  scale_fill_gradientn(colors=mex.brewer(palette_name=palette_name, direction=direction, override.order = F),
+  scale_fill_gradientn(colors = mex.brewer(palette_name = palette_name, direction = direction, override.order = F),
                        ...)
 }
 
@@ -410,7 +419,7 @@ scale_fill_mex_c <- function(palette_name, direction=1, ...){
 #' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
 #'
 #' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
 #' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
 #' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
@@ -433,7 +442,7 @@ scale_colour_mex_d <- scale_color_mex_d
 #' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
 #'
 #' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
 #' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
 #' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}

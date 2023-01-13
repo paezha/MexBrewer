@@ -19,9 +19,9 @@ knitr::opts_chunk$set(
 <!-- badges: end -->
 
 MexBrewer is a package with color palettes inspired by the works of
-Mexican painters and muralists. This package draws inspiration and heavily from the code of
+Mexican painters and muralists. This package was motivated and draws heavily from the code of [Blake R. Mills](https://github.com/BlakeRMills/)'s
 [{MetBrewer}](https://github.com/BlakeRMills/MetBrewer), the package with color
-palettes form the Metropolitan Museum of Art of New York, created by [Blake R. Mills](https://github.com/BlakeRMills/). The structure of the package and coding, like {MetBrewer}, are based on [{PNWColors}](https://github.com/jakelawlor/PNWColors) and [{wesanderson}](https://github.com/karthik/wesanderson).
+palettes form the Metropolitan Museum of Art of New York. The structure of the package and coding, like {MetBrewer}, are based on [{PNWColors}](https://github.com/jakelawlor/PNWColors) and [{wesanderson}](https://github.com/karthik/wesanderson).
 
 ## Installation
 
@@ -108,12 +108,56 @@ knitr::include_graphics("man/figures/alacena.png")
 
 This palette is called `Tierra`.
 
-```{r tierra, echo=FALSE, out.width="400px", fig.cap="Tiera"}
+```{r tierra, echo=FALSE, out.width="400px", fig.cap="Tierra"}
 knitr::include_graphics("man/figures/maria_izquierdo_tierra.jpg")
 ```
 
 ```{r tierra-palette, echo=FALSE, out.width="185px", fig.cap="Tierra"}
 knitr::include_graphics("man/figures/tierra.png")
+```
+
+***
+
+### Frida Khalo
+
+#### La Casa Azul
+
+These palettes are called `Casita1`, `Casita2`, and `Casita3`. They are inspired by the colors of [Frida's home](https://www.museofridakahlo.org.mx/museo/) in Coyoacán, Mexico City.
+
+```{r casa-azul-1, echo=FALSE, out.width="400px", fig.cap="Casa Azul"}
+knitr::include_graphics("man/figures/casa-azul-1.jpg")
+```
+
+```{r casa-azul-2, echo=FALSE, out.width="400px", fig.cap="Casa Azul"}
+knitr::include_graphics("man/figures/casa-azul-2.jpg")
+```
+
+```{r casa-azul-3, echo=FALSE, out.width="400px", fig.cap="Casa Azul"}
+knitr::include_graphics("man/figures/casa-azul-3.jpg")
+```
+
+```{r casa-azul-4, echo=FALSE, out.width="400px", fig.cap="Casa Azul"}
+knitr::include_graphics("man/figures/casa-azul-4.jpg")
+```
+
+```{r casa-azul-5, echo=FALSE, out.width="400px", fig.cap="Casa Azul"}
+knitr::include_graphics("man/figures/casa-azul-5.jpg")
+```
+
+```{r casa-azul-6, echo=FALSE, out.width="400px", fig.cap="Casa Azul"}
+knitr::include_graphics("man/figures/casa-azul-6.jpg")
+```
+
+```{r casita-1-palette, echo=FALSE, out.width="185px", fig.cap="Casita1"}
+knitr::include_graphics("man/figures/casita-1.png")
+```
+
+```{r casita-2-palette, echo=FALSE, out.width="185px", fig.cap="Casita2"}
+knitr::include_graphics("man/figures/casita-2.png")
+```
+
+```{r casita-3-palette, echo=FALSE, out.width="185px", fig.cap="Casita3"}
+knitr::include_graphics("man/figures/casita-3.png")
 ```
 
 ***

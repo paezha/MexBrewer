@@ -7,11 +7,11 @@
 <!-- badges: end -->
 
 MexBrewer is a package with color palettes inspired by the works of
-Mexican painters and muralists. This package draws inspiration and
-heavily from the code of
+Mexican painters and muralists. This package was motivated and draws
+heavily from the code of [Blake R.
+Mills](https://github.com/BlakeRMills/)’s
 [{MetBrewer}](https://github.com/BlakeRMills/MetBrewer), the package
-with color palettes form the Metropolitan Museum of Art of New York,
-created by [Blake R. Mills](https://github.com/BlakeRMills/). The
+with color palettes form the Metropolitan Museum of Art of New York. The
 structure of the package and coding, like {MetBrewer}, are based on
 [{PNWColors}](https://github.com/jakelawlor/PNWColors) and
 [{wesanderson}](https://github.com/karthik/wesanderson).
@@ -154,9 +154,9 @@ This palette is called `Tierra`.
 
 <div class="figure">
 
-<img src="man/figures/maria_izquierdo_tierra.jpg" alt="Tiera" width="400px" />
+<img src="man/figures/maria_izquierdo_tierra.jpg" alt="Tierra" width="400px" />
 <p class="caption">
-Tiera
+Tierra
 </p>
 
 </div>
@@ -166,6 +166,98 @@ Tiera
 <img src="man/figures/tierra.png" alt="Tierra" width="185px" />
 <p class="caption">
 Tierra
+</p>
+
+</div>
+
+------------------------------------------------------------------------
+
+### Frida Khalo
+
+#### La Casa Azul
+
+These palettes are called `Casita1`, `Casita2`, and `Casita3`. They are
+inspired by the colors of [Frida’s
+home](https://www.museofridakahlo.org.mx/museo/) in Coyoacán, Mexico
+City.
+
+<div class="figure">
+
+<img src="man/figures/casa-azul-1.jpg" alt="Casa Azul" width="400px" />
+<p class="caption">
+Casa Azul
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/casa-azul-2.jpg" alt="Casa Azul" width="400px" />
+<p class="caption">
+Casa Azul
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/casa-azul-3.jpg" alt="Casa Azul" width="400px" />
+<p class="caption">
+Casa Azul
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/casa-azul-4.jpg" alt="Casa Azul" width="400px" />
+<p class="caption">
+Casa Azul
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/casa-azul-5.jpg" alt="Casa Azul" width="400px" />
+<p class="caption">
+Casa Azul
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/casa-azul-6.jpg" alt="Casa Azul" width="400px" />
+<p class="caption">
+Casa Azul
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/casita-1.png" alt="Casita1" width="185px" />
+<p class="caption">
+Casita1
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/casita-2.png" alt="Casita2" width="185px" />
+<p class="caption">
+Casita2
+</p>
+
+</div>
+
+<div class="figure">
+
+<img src="man/figures/casita-3.png" alt="Casita3" width="185px" />
+<p class="caption">
+Casita3
 </p>
 
 </div>
