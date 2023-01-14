@@ -4,7 +4,7 @@
 \name{MexBrewer-package}
 \alias{MexBrewer}
 \alias{MexBrewer-package}
-\title{MexBrewer: Color Palettes Inspired by Works of Mexican Muralists}
+\title{MexBrewer: Color Palettes Inspired by Works of Mexican Painters and Muralists}
 \description{
 Palettes Inspired by Works of Mexican Muralists.
 }

@@ -633,7 +633,7 @@ canvas_mandelbrot(colors = mex.brewer("Naturaleza"),
 
 <img src="man/figures/README-aRtsy-3-1.png" width="100%" />
 
-### Meghan S. Harris’s [waves](https://www.thetidytrekker.com/post/making-waves)
+### Meghan S. Harris’s [waves](https://thetidytrekker.com/rtistry.html)
 
 These plots are adaptations of Meghan Harris’s artsy waves. Create data
 frames with wave functions:

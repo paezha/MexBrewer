@@ -1,5 +1,5 @@
 Package: MexBrewer
-Title: Color Palettes Inspired by Works of Mexican Muralists
+Title: Color Palettes Inspired by Works of Mexican Painters and Muralists
 Version: 0.0.2
 Authors@R: 
     person("Antonio", "Páez", , "paezha@mcmaster.ca", role = c("aut", "cre"),

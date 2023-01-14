@@ -34,7 +34,7 @@ A vector of colors.
 }
 \description{
 These are a handful of color palettes from Mexican muralists.
-Complete list of palette colors and the works that inspired them can be found \href{https://paezha.github.io/MexBrewer}{here}.
+Complete list of palette colors and the works that inspired them can be found \href{https://paezha.github.io/MexBrewer/}{here}.
 }
 \examples{
 mex.brewer("Atentado")

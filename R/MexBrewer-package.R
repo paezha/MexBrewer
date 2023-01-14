@@ -125,7 +125,7 @@ MexPalettes <- list(
 #' Mex Palette Generator
 #'
 #' These are a handful of color palettes from Mexican muralists.
-#' Complete list of palette colors and the works that inspired them can be found \href{https://paezha.github.io/MexBrewer}{here}.
+#' Complete list of palette colors and the works that inspired them can be found \href{https://paezha.github.io/MexBrewer/}{here}.
 #'
 #' @param palette_name Name of Palette. Choices are:
 #' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
