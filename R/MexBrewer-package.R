@@ -19,6 +19,7 @@ NULL
 #'
 #' @docType data
 #' @keywords datasets
+#' @return A simple features data frame
 #' @name mx_estados
 #' @usage data(mx_estados)
 #' @examples
@@ -47,8 +48,8 @@ NULL
 #' @name df_mxstate_2020
 #' @docType data
 #' @references Population estimates taken from the \href{https://www.inegi.org.mx/programas/ccpv/2020/default.html#Tabulados}{Censo 2020.}
-#'
 #' @keywords data
+#' @return A data.frame
 #' @examples
 #' data("df_mxstate_2020")
 #' head(df_mxstate_2020)
@@ -138,7 +139,7 @@ MexPalettes <- list(
 #' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
 #' that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
 #' colors are selected in sequential order from the full palette instead. Default is FALSE.
-#' @return A vector of colors.
+#' @return A vector of colors for use in visualization tasks
 #' @examples
 #' mex.brewer("Atentado")
 #'
@@ -229,7 +230,6 @@ print.palette <- function(x, ...) {
 #' @export
 sequential_palettes <- c("Aurora", "Concha", "Frida", "Naturaleza", "Taurus1", "Taurus2", "Tierra")
 
-
 # Names whether a palette is sequential
 
 #' Sequential Palette Check
@@ -239,9 +239,9 @@ sequential_palettes <- c("Aurora", "Concha", "Frida", "Naturaleza", "Taurus1", "
 #' @param palette_name Name of Palette. Choices are:
 #' \code{Alacena},\code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
 #' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
+#' @return TRUE/FALSE if palette is sequential
 #' @examples
 #' sequential.palette("Aurora")
-#' @return TRUE/FALSE if palette is sequential
 #' @export
 sequential.palette <- function(palette_name){
 
@@ -258,10 +258,57 @@ sequential.palette <- function(palette_name){
 
 # MexBrewer palettes for plotting with ggplot2
 
-#' MexBrewer palettes for plotting with ggplot2
+
+#' Continuous MexBrewer scales for use with ggplot2
 #'
-#' Function for using \code{MexBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_mex_d}} and \code{\link{scale_fill_mex_d}}
-#' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
+#' Functions \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales enable the use of \code{MexBrewer} colors with \code{ggplot2} continuous scales.
+#'
+#' @param palette_name Name of Palette. Choices are:
+#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
+#' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
+#' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
+#' @param ... Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}
+#' @name ggplot2-scales-continuous
+#' @rdname ggplot2-scales-continuous
+#' @return A `ScaleContinuous` object that can be added to a `ggplot` object
+#' @family color scales
+#' @import ggplot2
+#' @export
+scale_color_mex_c <- function(palette_name, direction=1, ...){
+
+  `%notin%` <- Negate(`%in%`)
+
+  if (direction %notin% c(1, -1)){
+    stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
+  }
+
+  scale_color_gradientn(colors = mex.brewer(palette_name = palette_name, direction = direction, override.order = F),
+                        ...)
+}
+
+#' @rdname ggplot2-scales-continuous
+#' @export
+#'
+scale_colour_mex_c <- scale_color_mex_c
+
+#' @rdname ggplot2-scales-continuous
+#' @export
+#'
+scale_fill_mex_c <- function(palette_name, direction=1, ...){
+
+  `%notin%` <- Negate(`%in%`)
+
+  if (direction %notin% c(1, -1)){
+    stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
+  }
+
+  scale_fill_gradientn(colors = mex.brewer(palette_name = palette_name, direction = direction, override.order = F),
+                       ...)
+}
+
+#' Discrete MexBrewer scales for use with ggplot2
+#'
+#' Functions \code{\link{scale_color_mex_d}} and \code{\link{scale_fill_mex_d}} enable the use of \code{MexBrewer} colors with \code{ggplot2} discrete scales.
 #'
 #' @param palette_name Name of Palette. Choices are:
 #' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
@@ -271,12 +318,16 @@ sequential.palette <- function(palette_name){
 #' that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
 #' colors are selected in sequential order from the full palette instead. Default is FALSE.
 #' @param ... Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}
+#' @family color scales
+#' @name ggplot2-scales-discrete
+#' @rdname ggplot2-scales-discrete
+#' @return A `ScaleDiscrete` object that can be added to a `ggplot` object
 #' @import ggplot2
 #' @examples
 #' library(ggplot2)
-#' ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
-#' geom_point() +
-#' scale_color_mex_d("Atentado")
+#' ggplot(data=iris, aes(x=Species, y=Sepal.Length, fill=Species)) +
+#' geom_violin() +
+#' scale_fill_mex_d("Aurora")
 #' @export
 scale_color_mex_d <- function(palette_name, direction=1, override.order=FALSE, ...){
   mex.brewer.disc <- function(palette_name, direction = c(1, -1), override.order=FALSE) {
@@ -308,25 +359,11 @@ scale_color_mex_d <- function(palette_name, direction=1, override.order=FALSE, .
                  ...)
 }
 
-#' MexBrewer palettes for plotting with ggplot2
-#'
-#' Function for using \code{MexBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_mex_d}} and \code{\link{scale_fill_mex_d}}
-#' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
-#'
-#' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
-#' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
-#' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
-#' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
-#' that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
-#' colors are selected in sequential order from the full palette instead. Default is FALSE.
-#' @param ... Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}
-#' @import ggplot2
-#' @examples
-#' library(ggplot2)
-#' ggplot(data=iris, aes(x=Species, y=Sepal.Length, fill=Species)) +
-#' geom_violin() +
-#' scale_fill_mex_d("Aurora")
+#' @rdname ggplot2-scales-discrete
+#' @export
+scale_colour_mex_d <- scale_color_mex_d
+
+#' @rdname ggplot2-scales-discrete
 #' @export
 scale_fill_mex_d <- function(palette_name, direction = 1, override.order=FALSE, ...){
   mex.brewer.disc <- function(palette_name, direction = c(1, -1), override.order=FALSE) {
@@ -356,105 +393,5 @@ scale_fill_mex_d <- function(palette_name, direction = 1, override.order=FALSE, 
                  palette = mex.brewer.disc(palette_name=palette_name, direction=direction, override.order=override.order),
                  ...)
 }
-
-
-#' MexBrewer palettes for plotting with ggplot2
-#'
-#' Function for using \code{MexBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_mex_d}} and \code{\link{scale_fill_mex_d}}
-#' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
-#'
-#' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
-#' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
-#' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
-#' @param ... Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}
-#' @import ggplot2
-#' @examples
-#' library(ggplot2)
-#' ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Sepal.Length)) +
-#' geom_point() +
-#' scale_color_mex_c("Tierra", direction=-1)
-#' @export
-scale_color_mex_c <- function(palette_name, direction=1, ...){
-
-  `%notin%` <- Negate(`%in%`)
-
-  if (direction %notin% c(1, -1)){
-    stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
-  }
-
-  scale_color_gradientn(colors = mex.brewer(palette_name = palette_name, direction = direction, override.order = F),
-                        ...)
-}
-
-
-#' MexBrewer palettes for plotting with ggplot2
-#'
-#' Function for using \code{MexBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_mex_d}} and \code{\link{scale_fill_mex_d}}
-#' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
-#'
-#' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
-#' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
-#' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
-#' @param ... Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}
-#' @import ggplot2
-#' @export
-scale_fill_mex_c <- function(palette_name, direction=1, ...){
-
-  `%notin%` <- Negate(`%in%`)
-
-  if (direction %notin% c(1, -1)){
-    stop("Direction not valid. Please use 1 for standard palette or -1 for reversed palette.")
-  }
-
-  scale_fill_gradientn(colors = mex.brewer(palette_name = palette_name, direction = direction, override.order = F),
-                       ...)
-}
-
-
-#' MexBrewer palettes for plotting with ggplot2
-#'
-#' Function for using \code{MexBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_mex_d}} and \code{\link{scale_fill_mex_d}}
-#' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
-#'
-#' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
-#' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
-#' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
-#' @param override.order Colors are picked from palette to maximize readability and aesthetics. This means
-#' that colors are not always selected in sequential order from the full palette. If override.order is set to TRUE,
-#' colors are selected in sequential order from the full palette instead. Default is FALSE.
-#' @param ... Other arguments passed on to \code{\link[ggplot2]{discrete_scale}}
-#' @import ggplot2
-#' @examples
-#' library(ggplot2)
-#' ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Species)) +
-#' geom_point() +
-#' scale_colour_mex_d("Frida")
-#' @export
-
-scale_colour_mex_d <- scale_color_mex_d
-
-#' MexBrewer palettes for plotting with ggplot2
-#'
-#' Function for using \code{MexBrewer} colors schemes in \code{ggplot2}. Use \code{\link{scale_color_mex_d}} and \code{\link{scale_fill_mex_d}}
-#' for discrete scales and \code{\link{scale_color_mex_c}} and \code{\link{scale_fill_mex_c}} for continuous scales.
-#'
-#' @param palette_name Name of Palette. Choices are:
-#' \code{Alacena}, \code{Atentado}, \code{Aurora}, \code{Casita1}, \code{Casita2}, \code{Casita3}, \code{Concha}, \code{Frida}, \code{Huida},  \code{Maiz},  \code{Naturaleza},\code{Ofrenda},
-#' \code{Revolucion}, \code{Ronda}, \code{Taurus1}, \code{Taurus2},\code{Tierra}, \code{Vendedora}.
-#' @param direction Sets order of colors. Default palette is 1. If direction is -1, palette color order is reversed
-#' @param ... Other arguments passed on to \code{\link[ggplot2]{scale_color_gradientn}}
-#' @import ggplot2
-#' @examples
-#' library(ggplot2)
-#' ggplot(data=iris, aes(x=Sepal.Length, y=Sepal.Width, color=Sepal.Length)) +
-#' geom_point() +
-#' scale_colour_mex_c("Concha", direction=-1)
-#' @export
-
-scale_colour_mex_c <- scale_color_mex_c
-
 
 # TO-DO FUNCTION TO DISPLAY ALL PALETTES

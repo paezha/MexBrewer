@@ -6,7 +6,7 @@
 \alias{MexBrewer-package}
 \title{MexBrewer: Color Palettes Inspired by Works of Mexican Painters and Muralists}
 \description{
-Palettes Inspired by Works of Mexican Muralists.
+Color palettes inspired by the works of Mexican painters and muralists. The package includes functions that return vectors of colors and also functions to use color and fill scales in 'ggplot2' visualizations.
 }
 \seealso{
 Useful links:

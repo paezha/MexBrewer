@@ -30,7 +30,7 @@ that colors are not always selected in sequential order from the full palette. I
 colors are selected in sequential order from the full palette instead. Default is FALSE.}
 }
 \value{
-A vector of colors.
+A vector of colors for use in visualization tasks
 }
 \description{
 These are a handful of color palettes from Mexican muralists.

@@ -10,6 +10,9 @@ An object of class \code{data.frame} with 32 rows and 11 columns.
 \usage{
 df_mxstate_2020
 }
+\value{
+A data.frame
+}
 \description{
 A data.frame containing population estimates for all the Mexican states in 2020
 }

@@ -16,6 +16,9 @@ A simple features data frame with 32 rows and 4 variables:
 \usage{
 data(mx_estados)
 }
+\value{
+A simple features data frame
+}
 \description{
 A simple features object with the boundaries of states in Mexico (unprojected; CRS is WGS 84).
 }

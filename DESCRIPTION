@@ -4,7 +4,10 @@ Version: 0.0.2
 Authors@R: 
     person("Antonio", "Páez", , "paezha@mcmaster.ca", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-6912-9919"))
-Description: Palettes Inspired by Works of Mexican Muralists.
+Description: Color palettes inspired by the works of 
+  Mexican painters and muralists. The package includes functions that
+  return vectors of colors and also functions to use color and fill
+  scales in 'ggplot2' visualizations.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
