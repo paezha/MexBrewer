@@ -40,8 +40,13 @@ structure of the package and coding, like {MetBrewer}, are based on
 
 ## Installation
 
-Currently, there is only a development version of {MexBrewer}, which can
-be installed like so:
+The package is available from CRAN:
+
+``` r
+install.packages("MexBrewer")
+```
+
+The development version of the package can be installed like so:
 
 ``` r
 if (!require("remotes")) install.packages("remotes")
