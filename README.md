@@ -26,6 +26,7 @@ release](https://img.shields.io/github/release-date/paezha/MexBrewer)
 activity](https://img.shields.io/github/commit-activity/y/paezha/MexBrewer)
 ![GitHub last
 commit](https://img.shields.io/github/last-commit/paezha/MexBrewer)
+[![](https://cranlogs.r-pkg.org/badges/mexbrewer)](https://cran.r-project.org/package=mexbrewer)
 <!-- badges: end -->
 
 MexBrewer is a package with color palettes inspired by the works of
