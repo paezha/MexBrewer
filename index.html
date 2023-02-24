@@ -70,8 +70,8 @@
 <!-- badges: start -->
 
 <p><a href="https://lifecycle.r-lib.org/articles/stages.html#stable" class="external-link"><img src="https://img.shields.io/badge/lifecycle-stable-green.svg" alt="Lifecycle: stable"></a></p>
-<p><a href="https://github.com/paezha/MexBrewer/stargazers" class="external-link"><img src="https://img.shields.io/github/stars/paezha/edashop?style=social" alt="GitHub Stars"></a></p>
-<p><img src="https://img.shields.io/github/search/paezha/MexBrewer/R" alt="GitHub search hit counter: R"><br><img src="https://img.shields.io/github/search/paezha/MexBrewer/rtistry" alt="GitHub search hit counter: data"></p>
+<p><a href="https://github.com/paezha/MexBrewer/stargazers" class="external-link"><img src="https://img.shields.io/github/stars/paezha/MexBrewer?style=social" alt="GitHub Stars"></a></p>
+<p><img src="https://img.shields.io/github/search/paezha/MexBrewer/R" alt="GitHub search hit counter: R"><br><img src="https://img.shields.io/github/search/paezha/MexBrewer/dataviz" alt="GitHub search hit counter: dataviz"><img src="https://img.shields.io/github/search/paezha/MexBrewer/colors" alt="GitHub search hit counter: colors"><img src="https://img.shields.io/github/search/paezha/MexBrewer/rtistry" alt="GitHub search hit counter: rtistry"></p>
 <p><img src="https://img.shields.io/github/issues/paezha/MexBrewer" alt="GitHub issues"><img src="https://img.shields.io/github/release-date/paezha/MexBrewer" alt="GitHub release"><img src="https://img.shields.io/github/commit-activity/y/paezha/MexBrewer" alt="GitHub commit activity"><img src="https://img.shields.io/github/last-commit/paezha/MexBrewer" alt="GitHub last commit"><a href="https://cran.r-project.org/package=mexbrewer" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/mexbrewer"></a> <!-- badges: end --></p>
 <p>MexBrewer is a package with color palettes inspired by the works of Mexican painters and muralists. This package was motivated and draws heavily from the code of <a href="https://github.com/BlakeRMills/" class="external-link">Blake R. Mills</a>’s <a href="https://github.com/BlakeRMills/MetBrewer" class="external-link">{MetBrewer}</a>, the package with color palettes form the Metropolitan Museum of Art of New York. The structure of the package and coding, like {MetBrewer}, are based on <a href="https://github.com/jakelawlor/PNWColors" class="external-link">{PNWColors}</a> and <a href="https://github.com/karthik/wesanderson" class="external-link">{wesanderson}</a>.</p>
 <div class="section level2">
@@ -606,7 +606,9 @@ ggplot() +
 <span>              size <span class="op">=</span> <span class="fl">0.5</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu">scale_fill_gradientn</span><span class="op">(</span>colors <span class="op">=</span> <span class="fu"><a href="reference/mex.brewer.html">mex.brewer</a></span><span class="op">(</span><span class="st">"Ofrenda"</span><span class="op">)</span><span class="op">)</span><span class="op">+</span></span>
 <span>  <span class="fu">theme_void</span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu">theme</span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></span></code></pre></div>
+<span>  <span class="fu">theme</span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.</span></span>
+<span><span class="co">#&gt; ℹ Please use `linewidth` instead.</span></span></code></pre></div>
 <p><img src="reference/figures/README-unnamed-chunk-10-1.png" width="100%"></p>
 <p>Plot layered waves using polar coordinates and palette <code>Atentado</code>:</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
