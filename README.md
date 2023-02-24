@@ -12,12 +12,16 @@ status](https://www.r-pkg.org/badges/version/MexBrewer)](https://CRAN.R-project.
 stable](https://img.shields.io/badge/lifecycle-stable-green.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
 
 [![GitHub
-Stars](https://img.shields.io/github/stars/paezha/edashop?style=social)](https://github.com/paezha/MexBrewer/stargazers)
+Stars](https://img.shields.io/github/stars/paezha/MexBrewer?style=social)](https://github.com/paezha/MexBrewer/stargazers)
 
 ![GitHub search hit counter:
 R](https://img.shields.io/github/search/paezha/MexBrewer/R)  
 ![GitHub search hit counter:
-data](https://img.shields.io/github/search/paezha/MexBrewer/rtistry)
+dataviz](https://img.shields.io/github/search/paezha/MexBrewer/dataviz)
+![GitHub search hit counter:
+colors](https://img.shields.io/github/search/paezha/MexBrewer/colors)
+![GitHub search hit counter:
+rtistry](https://img.shields.io/github/search/paezha/MexBrewer/rtistry)
 
 ![GitHub issues](https://img.shields.io/github/issues/paezha/MexBrewer)
 ![GitHub
@@ -745,6 +749,8 @@ ggplot(wave_layers) +
   scale_fill_gradientn(colors = mex.brewer("Ofrenda"))+
   theme_void() +
   theme(legend.position = "none")
+#> Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+#> ℹ Please use `linewidth` instead.
 ```
 
 <img src="man/figures/README-unnamed-chunk-10-1.png" width="100%" />
